@@ -6,19 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Company.Project.MvcWebUI.Controllers
 {
-    public class AccountController : Controller
+    public class UserController : Controller
     {
-        public IActionResult Login()
+        public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Register()
-        {
-            return View();
-        }
-
-        public IActionResult ForgotPassword()
+        public IActionResult AddEdit()
         {
             return View();
         }

@@ -24,14 +24,14 @@ Author: SAEROX
         });
     </script>
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/assets/img/favicon-16x16.png">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/vendors/css/base/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendors/css/base/elisyam-1.5.min.css">
-    <link rel="stylesheet" href="assets/css/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl-carousel/owl.theme.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/base/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/base/elisyam-1.5.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl-carousel/owl.theme.min.css">
     <!-- Tweaks for older IEs-->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -41,7 +41,7 @@ Author: SAEROX
     <!-- Begin Preloader -->
     <div id="preloader">
         <div class="canvas">
-            <img src="assets/img/logo.png" alt="logo" class="loader-logo">
+            <img src="~/assets/img/logo.png" alt="logo" class="loader-logo">
             <div class="spinner"></div>
         </div>
     </div>
@@ -59,7 +59,9 @@ Author: SAEROX
             </div>
             <!-- End Left Sidebar -->
             <div class="content-inner">
-                @RenderBody();
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
                 <!-- End Container -->
                 <!-- Begin Page Footer-->
                 <partial name="_Footer" />
@@ -82,7 +84,7 @@ Author: SAEROX
                                     <!-- Begin Chat Message -->
                                     <span class="date">Today</span>
                                     <div class="messenger-message messenger-message-sender">
-                                        <img class="messenger-image messenger-image-default" src="assets/img/avatar/avatar-02.jpg" alt="...">
+                                        <img class="messenger-image messenger-image-default" src="~/assets/img/avatar/avatar-02.jpg" alt="...">
                                         <div class="messenger-message-wrapper">
                                             <div class="messenger-message-content">
                                                 <p>
@@ -111,7 +113,7 @@ Author: SAEROX
                                         </div>
                                     </div>
                                     <div class="messenger-message messenger-message-sender">
-                                        <img class="messenger-image messenger-image-default" src="assets/img/avatar/avatar-02.jpg" alt="...">
+                                        <img class="messenger-image messenger-image-default" src="~/assets/img/avatar/avatar-02.jpg" alt="...">
                                         <div class="messenger-message-wrapper">
                                             <div class="messenger-message-content">
                                                 <p>
@@ -138,7 +140,7 @@ Author: SAEROX
                                     </div>
                                     <span class="date">Yesterday</span>
                                     <div class="messenger-message messenger-message-sender">
-                                        <img class="messenger-image messenger-image-default" src="assets/img/avatar/avatar-05.jpg" alt="...">
+                                        <img class="messenger-image messenger-image-default" src="~/assets/img/avatar/avatar-05.jpg" alt="...">
                                         <div class="messenger-message-wrapper">
                                             <div class="messenger-message-content">
                                                 <p>
@@ -157,7 +159,7 @@ Author: SAEROX
                                         </div>
                                     </div>
                                     <div class="messenger-message messenger-message-sender">
-                                        <img class="messenger-image messenger-image-default" src="assets/img/avatar/avatar-05.jpg" alt="...">
+                                        <img class="messenger-image messenger-image-default" src="~/assets/img/avatar/avatar-05.jpg" alt="...">
                                         <div class="messenger-message-wrapper">
                                             <div class="messenger-message-content">
                                                 <p>
@@ -222,7 +224,7 @@ Author: SAEROX
                                             <li class="list-group-item">
                                                 <div class="media">
                                                     <div class="media-left align-self-center mr-3">
-                                                        <img src="assets/img/avatar/avatar-02.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
+                                                        <img src="~/assets/img/avatar/avatar-02.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
                                                     </div>
                                                     <div class="media-body align-self-center">
                                                         <a href="javascript:void(0);">Brandon Smith</a>
@@ -232,7 +234,7 @@ Author: SAEROX
                                             <li class="list-group-item">
                                                 <div class="media">
                                                     <div class="media-left align-self-center mr-3">
-                                                        <img src="assets/img/avatar/avatar-03.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
+                                                        <img src="~/assets/img/avatar/avatar-03.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
                                                     </div>
                                                     <div class="media-body align-self-center">
                                                         <a href="javascript:void(0);">Louis Henry</a>
@@ -242,7 +244,7 @@ Author: SAEROX
                                             <li class="list-group-item">
                                                 <div class="media">
                                                     <div class="media-left align-self-center mr-3">
-                                                        <img src="assets/img/avatar/avatar-04.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
+                                                        <img src="~/assets/img/avatar/avatar-04.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
                                                     </div>
                                                     <div class="media-body align-self-center">
                                                         <a href="javascript:void(0);">Nathan Hunter</a>
@@ -252,7 +254,7 @@ Author: SAEROX
                                             <li class="list-group-item">
                                                 <div class="media">
                                                     <div class="media-left align-self-center mr-3">
-                                                        <img src="assets/img/avatar/avatar-05.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
+                                                        <img src="~/assets/img/avatar/avatar-05.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
                                                     </div>
                                                     <div class="media-body align-self-center">
                                                         <a href="javascript:void(0);">Megan Duncan</a>
@@ -262,7 +264,7 @@ Author: SAEROX
                                             <li class="list-group-item">
                                                 <div class="media">
                                                     <div class="media-left align-self-center mr-3">
-                                                        <img src="assets/img/avatar/avatar-06.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
+                                                        <img src="~/assets/img/avatar/avatar-06.jpg" alt="..." class="img-fluid rounded-circle" style="width: 35px;">
                                                     </div>
                                                     <div class="media-body align-self-center">
                                                         <a href="javascript:void(0);">Beverly Oliver</a>
@@ -385,21 +387,5 @@ Author: SAEROX
         </div>
     </div>
     <!-- End Modal -->
-    <!-- Begin Vendor Js -->
-    <script src="assets/vendors/js/base/jquery.min.js"></script>
-    <script src="assets/vendors/js/base/core.min.js"></script>
-    <!-- End Vendor Js -->
-    <!-- Begin Page Vendor Js -->
-    <script src="assets/vendors/js/nicescroll/nicescroll.min.js"></script>
-    <script src="assets/vendors/js/chart/chart.min.js"></script>
-    <script src="assets/vendors/js/progress/circle-progress.min.js"></script>
-    <script src="assets/vendors/js/calendar/moment.min.js"></script>
-    <script src="assets/vendors/js/calendar/fullcalendar.min.js"></script>
-    <script src="assets/vendors/js/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendors/js/app/app.js"></script>
-    <!-- End Page Vendor Js -->
-    <!-- Begin Page Snippets -->
-    <script src="assets/js/dashboard/db-default.js"></script>
-    <!-- End Page Snippets -->
 </body>
 </html>
