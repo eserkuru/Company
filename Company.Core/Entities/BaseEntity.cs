@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Company.Core.Entities
 {
     public abstract class BaseEntity : IEntity
     {
+        [Key]
         public Guid Id
         {
             get => Id == null ? Guid.NewGuid() : Id;

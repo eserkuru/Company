@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Project.MvcWebUI", "Company.Project.MvcWebUI\Company.Project.MvcWebUI.csproj", "{7B844BB8-08CC-40A6-AE9A-BAB1C904AF8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Core", "Company.Core\Company.Core.csproj", "{C468A023-CED0-483E-BA8E-5E751EED8FCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Core", "Company.Core\Company.Core.csproj", "{C468A023-CED0-483E-BA8E-5E751EED8FCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Project.Entities", "Company.Project.Entities\Company.Project.Entities.csproj", "{7784895B-EBB9-4D7B-9DA9-A4AF87723ED9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Project.Entities", "Company.Project.Entities\Company.Project.Entities.csproj", "{7784895B-EBB9-4D7B-9DA9-A4AF87723ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Project.DataAccess", "Company.Project.DataAccess\Company.Project.DataAccess.csproj", "{BA27F80F-E3C3-434F-B61E-738F35BFF6DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{7784895B-EBB9-4D7B-9DA9-A4AF87723ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7784895B-EBB9-4D7B-9DA9-A4AF87723ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7784895B-EBB9-4D7B-9DA9-A4AF87723ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA27F80F-E3C3-434F-B61E-738F35BFF6DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA27F80F-E3C3-434F-B61E-738F35BFF6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA27F80F-E3C3-434F-B61E-738F35BFF6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA27F80F-E3C3-434F-B61E-738F35BFF6DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
