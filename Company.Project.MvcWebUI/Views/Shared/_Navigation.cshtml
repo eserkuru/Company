@@ -2,10 +2,15 @@
     <!-- Begin Main Navigation -->
     <ul class="list-unstyled">
         <li class="active">
-            <a href="#dropdown-db" aria-expanded="false" data-toggle="collapse"><i class="la la-columns"></i><span>Dashboard</span></a>
-            <ul id="dropdown-db" class="collapse list-unstyled pt-0">
-                <li><a class="active" href="@Url.Action("Index","Home")">User Reports</a></li>
-            </ul>
+            <a href="@Url.Action("Index","Account")"><i class="la la-columns"></i><span>Home Page</span></a>
+        </li>
+    </ul>
+    <span class="heading">Menus</span>
+    <ul class="list-unstyled">
+        <li>
+            <a href="@Url.Action("Index","Branches")"><i class="la la-building"></i><span>Branches</span></a>
+            <a href="@Url.Action("Index","Units")"><i class="la la-institution"></i><span>Units</span></a>
+            <a href="@Url.Action("Index","Employees")"><i class="la la-group"></i><span>Employees</span></a>
         </li>
     </ul>
     <span class="heading">System</span>
@@ -13,7 +18,7 @@
         <li>
             <a href="#dropdown-authentication" aria-expanded="false" data-toggle="collapse"><i class="la la-user"></i><span>Authentication</span></a>
             <ul id="dropdown-authentication" class="collapse list-unstyled pt-0">
-                <li><a href="@Url.Action("Index","User")">Users</a></li>
+                <li><a href="">Users</a></li>
                 <li><a href="#">Roles</a></li>
                 <li><a href="#">Authorities</a></li>
             </ul>

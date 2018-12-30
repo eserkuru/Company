@@ -13,9 +13,10 @@ namespace Company.Project.DataAccess.Concrete.Contexts
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Project; Trusted_Connection=true");
         }
 
-        public DbSet<Employee> Employees{ get; set; }
         public DbSet<Currency> Currencies { get; set; }
+        public DbSet<Organization> Organizations{ get; set; }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees{ get; set; }
         public DbSet<User> Users { get; set; }
     }
 }

@@ -6,9 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Company.Project.MvcWebUI.Controllers
 {
-    public class AccountController : Controller
+    public class OrganisationController : Controller
     {
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult AddEdit()
         {
             return View();
         }

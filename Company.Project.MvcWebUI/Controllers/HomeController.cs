@@ -12,7 +12,7 @@ namespace Company.Project.MvcWebUI.Controllers
     {
         public IActionResult Index()
         {
-            return RedirectToAction("UserReport", "Home");
+            return RedirectToAction("Index", "Account");
         }
 
         public IActionResult UserReport()
