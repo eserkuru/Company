@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete
+namespace Company.Project.Entities.Concrete.Nearby
 {
-    public class Department : BaseEntity
+    public class Plan : BaseEntity
     {
         public string Name { get; set; }
     }
