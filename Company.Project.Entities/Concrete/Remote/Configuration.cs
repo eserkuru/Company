@@ -5,6 +5,8 @@ namespace Company.Project.Entities.Concrete.Remote
 {
     public class Configuration : BaseEntity
     {
+        public Account Account { get; set; }
+
         public string DomainServer { get; set; }
         public string DomainUsername { get; set; }
         public string DomainPassword { get; set; }
@@ -12,6 +14,5 @@ namespace Company.Project.Entities.Concrete.Remote
         public string InitialName { get; set; }
         public string DatabaseUsername { get; set; }
         public string DatabasePassword { get; set; }
-        public Account Account { get; set; }
     }
 }

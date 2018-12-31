@@ -7,6 +7,9 @@ namespace Company.Project.Entities.Concrete.Remote
 {
     public class Unit : BaseEntity
     {
+        public Organisation Organisation { get; set; }
+        public Branch Branch { get; set; }
+
         public string Name { get; set; }
     }
 }

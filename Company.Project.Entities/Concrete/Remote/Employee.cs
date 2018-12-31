@@ -5,6 +5,10 @@ namespace Company.Project.Entities.Concrete.Remote
 {
     public class Employee : BaseEntity
     {
+        public Organisation Organisation { get; set; }
+        public Branch Branch { get; set; }
+        public Unit Units { get; set; }
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string NationalityId { get; set; }
@@ -17,9 +21,6 @@ namespace Company.Project.Entities.Concrete.Remote
         public string PhoneNumber { get; set; }
 
         public string Title { get; set; }
-        public Organisation Company { get; set; }
-        public Branch Branch { get; set; }
-        public Unit Department { get; set; }
         public string FixedSalary { get; set; }
         public Currency Currency { get; set; }
         public DateTime ContractStartDate { get; set; }
