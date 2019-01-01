@@ -1,0 +1,35 @@
+﻿<div class="horizontal-menu">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-light navbar-expand-lg main-menu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li><a href="@Url.Action("Index","Account")">Organisations</a></li>
+                        <li><a href="components-widgets.html">Calendar</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="reports" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+                            <ul class="dropdown-menu" aria-labelledby="reports">
+                                <li><a href="#">Employees Reports</a></li>
+                                <li><a href="#">Current Account Reports</a></li>
+                                <li><a href="#">User Reports</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="settings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                            <ul class="dropdown-menu" aria-labelledby="settings">
+                                <li><a href="@Url.Action("Index","User")">Users</a></li>
+                                <li><a href="#">Authorities</a></li>
+                                <li><a href="#">Payment Methods</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

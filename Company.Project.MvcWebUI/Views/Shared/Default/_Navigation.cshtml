@@ -1,0 +1,33 @@
+﻿<nav class="side-navbar box-scroll sidebar-scroll">
+    <!-- Begin Main Navigation -->
+    <ul class="list-unstyled">
+        <li>
+            <a href="@Url.Action("Index","Account")"><i class="la la-home"></i><span>Home Page</span></a>
+        </li>
+        <li class="active">
+            <a href="@Url.Action("Index","Organisation")"><i class="la la-columns"></i><span>Dashboard</span></a>
+        </li>
+        <li>
+            <a href="@Url.Action("Index","Branches")"><i class="la la-building"></i><span>Branches</span></a>
+        </li>
+    </ul>
+    <span class="heading">Applications</span>
+    <ul class="list-unstyled">
+        <li>
+            <a href="#dropdown-humanresources" aria-expanded="false" data-toggle="collapse"><i class="la la-group"></i><span>Human Resources</span></a>
+            <ul id="dropdown-humanresources" class="collapse list-unstyled pt-0">
+                <li><a href="@Url.Action("Index","Units")">Units</a></li>
+                <li><a href="@Url.Action("Index","Employees")">Employees</a></li>
+                <li><a href="#">Documents</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#dropdown-accounting" aria-expanded="false" data-toggle="collapse"><i class="la la-money"></i><span>Accounting</span></a>
+            <ul id="dropdown-accounting" class="collapse list-unstyled pt-0">
+                <li><a href="#">Current Accounts</a></li>
+                <li><a href="#">Currencies</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- End Main Navigation -->
+</nav>

@@ -56,7 +56,7 @@ namespace Company.Project.MvcWebUI
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Account}/{action=Index}/{id?}");
+                    template: "{controller=User}/{action=Login}/{id?}");
             });
         }
     }
