@@ -1,5 +1,5 @@
 ﻿using Company.Project.Entities.Concrete;
-using Company.Project.Entities.Concrete.Remote;
+using Company.Project.Entities.Concrete.Application;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,11 +7,11 @@ using System.Text;
 
 namespace Company.Project.DataAccess.Concrete.Contexts
 {
-    public class RemoteContext : DbContext
+    public class ApplicationContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Remote;Integrated Security=True;MultipleActiveResultSets=True");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Application;Integrated Security=True;MultipleActiveResultSets=True");
         }
 
         public DbSet<Account> Accounts { get; set; }

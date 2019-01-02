@@ -1,8 +1,8 @@
 ﻿using Company.Core.Entities;
-using Company.Project.Entities.Concrete.Nearby;
+using Company.Project.Entities.Concrete.Manager;
 using System;
 
-namespace Company.Project.Entities.Concrete.Remote
+namespace Company.Project.Entities.Concrete.Application
 {
     public class Account : BaseEntity
     {

@@ -1,7 +1,7 @@
 ﻿using Company.Core.Entities;
 using System;
 
-namespace Company.Project.Entities.Concrete.Remote
+namespace Company.Project.Entities.Concrete.Application
 {
     public class Employee : BaseEntity
     {

@@ -7,7 +7,7 @@ namespace PublishDatabase
     {
         static void Main(string[] args)
         {
-            using (var context = new NearbyContext())
+            using (var context = new ManagerContext())
             {
                 context.Database.EnsureDeleted();
                 Console.WriteLine("Nearby Database was deleted!");
@@ -16,7 +16,7 @@ namespace PublishDatabase
                 Console.WriteLine("Nearby Database was created!");
             }
 
-            using (var context = new RemoteContext())
+            using (var context = new ApplicationContext())
             {
                 context.Database.EnsureDeleted();
                 Console.WriteLine("Remote Database was deleted!");

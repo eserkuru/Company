@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete.Nearby
+namespace Company.Project.Entities.Concrete.Manager
 {
     public class Plan : BaseEntity
     {

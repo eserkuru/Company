@@ -1,4 +1,4 @@
-﻿using Company.Project.Entities.Concrete.Nearby;
+﻿using Company.Project.Entities.Concrete.Manager;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,11 +6,11 @@ using System.Text;
 
 namespace Company.Project.DataAccess.Concrete.Contexts
 {
-    public class NearbyContext : DbContext
+    public class ManagerContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Nearby;Integrated Security=True;MultipleActiveResultSets=True");
+            optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Manager;Integrated Security=True;MultipleActiveResultSets=True");
         }
 
         public DbSet<Client> Clients { get; set; }

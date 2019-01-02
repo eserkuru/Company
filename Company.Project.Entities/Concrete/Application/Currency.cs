@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete.Remote
+namespace Company.Project.Entities.Concrete.Application
 {
     public class Currency : BaseEntity
     {
