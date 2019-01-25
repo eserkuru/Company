@@ -17,3 +17,4 @@ namespace Company.Project.DataAccess.Concrete.Contexts
         public DbSet<Plan> Plans { get; set; }
     }
 }
+
