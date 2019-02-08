@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete.Manager
+namespace Company.Manager.Entities.Concrete.CRM
 {
     public class Plan : BaseEntity
     {

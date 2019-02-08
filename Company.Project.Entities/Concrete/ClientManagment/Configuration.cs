@@ -1,11 +1,11 @@
 ﻿using Company.Core.Entities;
 using System;
 
-namespace Company.Project.Entities.Concrete.Application
+namespace Company.Project.Entities.Concrete.ClientManagment
 {
     public class Configuration : BaseEntity
     {
-        public Account Account { get; set; }
+        public Client Client { get; set; }
 
         public string DomainServer { get; set; }
         public string DomainUsername { get; set; }

@@ -1,10 +1,10 @@
-﻿using Company.Project.Entities.Concrete.Manager;
+﻿using Company.Manager.Entities.Concrete.CRM;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.DataAccess.Concrete.Contexts
+namespace Company.Manager.DataAccess.Concrete.Contexts
 {
     public class ManagerContext : DbContext
     {
@@ -13,7 +13,7 @@ namespace Company.Project.DataAccess.Concrete.Contexts
             optionsBuilder.UseSqlServer(@"Data Source=.;Initial Catalog=Manager;Integrated Security=True;MultipleActiveResultSets=True");
         }
 
-        public DbSet<Client> Clients { get; set; }
+        public DbSet<Customer> Clients { get; set; }
         public DbSet<Plan> Plans { get; set; }
     }
 }

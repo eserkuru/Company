@@ -1,15 +1,15 @@
 ﻿using Company.Core.Entities;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Company.Project.Entities.Concrete.Application
+namespace Company.Manager.Entities.Concrete.CRM
 {
-    public class Branch : BaseEntity
+    public class Customer : BaseEntity
     {
-        public Organisation Organisation{ get; set; }
-
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string TaxNumber { get; set; }
+        public string TaxOffice { get; set; }
+        public string InvoiceTitle { get; set; }
         public string BillingAddress { get; set; }
         public string Town { get; set; }
         public string City { get; set; }
