@@ -5,7 +5,7 @@ namespace Company.Project.Entities.Concrete.ClientManagment
 {
     public class Configuration : BaseEntity
     {
-        public Client Client { get; set; }
+        public virtual Client Client { get; set; }
 
         public string DomainServer { get; set; }
         public string DomainUsername { get; set; }

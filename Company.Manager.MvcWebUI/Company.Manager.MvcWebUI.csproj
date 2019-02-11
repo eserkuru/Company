@@ -9,6 +9,10 @@
     <Folder Include="Areas\CRM\Data\" />
     <Folder Include="Areas\CRM\Models\" />
     <Folder Include="Areas\CRM\Views\" />
+    <Folder Include="Areas\Helpdesk\Controllers\" />
+    <Folder Include="Areas\Helpdesk\Data\" />
+    <Folder Include="Areas\Helpdesk\Models\" />
+    <Folder Include="Areas\Helpdesk\Views\" />
     <Folder Include="Areas\Store\Controllers\" />
     <Folder Include="Areas\Store\Data\" />
     <Folder Include="Areas\Store\Models\" />

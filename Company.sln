@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Project.Entities", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Project.DataAccess", "Company.Project.DataAccess\Company.Project.DataAccess.csproj", "{BA27F80F-E3C3-434F-B61E-738F35BFF6DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Manager.Entities", "Company.Manager.Entities\Company.Manager.Entities.csproj", "{80E549EE-EBBC-4942-8DC7-602D44597525}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Manager.Entities", "Company.Manager.Entities\Company.Manager.Entities.csproj", "{80E549EE-EBBC-4942-8DC7-602D44597525}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Manager.DataAccess", "Company.Manager.DataAccess\Company.Manager.DataAccess.csproj", "{ECA78FBB-A51C-4BC9-9AD9-A505C72F93F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Manager.DataAccess", "Company.Manager.DataAccess\Company.Manager.DataAccess.csproj", "{ECA78FBB-A51C-4BC9-9AD9-A505C72F93F8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{F347B4F5-FE1E-4BBC-8BF2-CDEE9C843642}"
 EndProject
@@ -25,15 +25,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{9DF8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9EDF6999-7D35-4DE7-A29F-CB17AB224DA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Project.Business.Tests", "Company.Project.Business.Tests\Company.Project.Business.Tests.csproj", "{C96C62A8-274E-4798-9BA3-706A6D8F3D12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Project.Business.Tests", "Company.Project.Business.Tests\Company.Project.Business.Tests.csproj", "{C96C62A8-274E-4798-9BA3-706A6D8F3D12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Project.Business", "Company.Project.Business\Company.Project.Business.csproj", "{F5603F80-7CAA-4160-ADAB-79E34347F07E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Project.Business", "Company.Project.Business\Company.Project.Business.csproj", "{F5603F80-7CAA-4160-ADAB-79E34347F07E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Manager.Business", "Company.Manager.Business\Company.Manager.Business.csproj", "{717C8C47-37D8-4794-84F4-7C26408965F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Manager.Business", "Company.Manager.Business\Company.Manager.Business.csproj", "{717C8C47-37D8-4794-84F4-7C26408965F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Manager.MvcWebUI", "Company.Manager.MvcWebUI\Company.Manager.MvcWebUI.csproj", "{7A06CBA8-8A1E-48E3-9791-FCE957D779FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Manager.MvcWebUI", "Company.Manager.MvcWebUI\Company.Manager.MvcWebUI.csproj", "{7A06CBA8-8A1E-48E3-9791-FCE957D779FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Company.Manager.Business.Tests", "Company.Manager.Business.Tests\Company.Manager.Business.Tests.csproj", "{9195BD3D-D786-48CE-8F23-8DC1F2A11DEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.Manager.Business.Tests", "Company.Manager.Business.Tests\Company.Manager.Business.Tests.csproj", "{9195BD3D-D786-48CE-8F23-8DC1F2A11DEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseCreator", "DatabaseCreator\DatabaseCreator.csproj", "{7412BBF4-7642-45A9-8025-95E93FD1C603}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{96A98E35-9DE1-4EC0-AD00-0543F51D37A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +89,10 @@ Global
 		{9195BD3D-D786-48CE-8F23-8DC1F2A11DEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9195BD3D-D786-48CE-8F23-8DC1F2A11DEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9195BD3D-D786-48CE-8F23-8DC1F2A11DEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7412BBF4-7642-45A9-8025-95E93FD1C603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7412BBF4-7642-45A9-8025-95E93FD1C603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7412BBF4-7642-45A9-8025-95E93FD1C603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7412BBF4-7642-45A9-8025-95E93FD1C603}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +111,7 @@ Global
 		{717C8C47-37D8-4794-84F4-7C26408965F6} = {792DCF5D-76BA-4160-AC63-B2CD6CBDA493}
 		{7A06CBA8-8A1E-48E3-9791-FCE957D779FB} = {F347B4F5-FE1E-4BBC-8BF2-CDEE9C843642}
 		{9195BD3D-D786-48CE-8F23-8DC1F2A11DEB} = {9EDF6999-7D35-4DE7-A29F-CB17AB224DA3}
+		{7412BBF4-7642-45A9-8025-95E93FD1C603} = {96A98E35-9DE1-4EC0-AD00-0543F51D37A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B23A59D-4B7B-44C7-876F-A6F90FCB9406}

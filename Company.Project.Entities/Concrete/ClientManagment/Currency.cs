@@ -1,4 +1,5 @@
 ﻿using Company.Core.Entities;
+using Company.Project.Entities.Concrete.Accounting;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,6 +8,8 @@ namespace Company.Project.Entities.Concrete.ClientManagment
 {
     public class Currency : BaseEntity
     {
+        public virtual Client Client { get; set; }
+
         /// <summary>
         /// Gets or sets the Current Name identifier
         /// </summary>

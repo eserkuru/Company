@@ -8,4 +8,9 @@
     <ProjectReference Include="..\Company.Core\Company.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Concrete\Helpdesk\" />
+    <Folder Include="Concrete\Store\" />
+  </ItemGroup>
+
 </Project>

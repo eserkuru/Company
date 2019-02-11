@@ -11,6 +11,6 @@ namespace Company.Project.Entities.Concrete.ClientManagment
         /// <summary>
         /// Gets or sets the Current Branch identifier
         /// </summary>
-        public Branch Branch { get; set; }
+        public virtual Branch Branch { get; set; }
     }
 }
