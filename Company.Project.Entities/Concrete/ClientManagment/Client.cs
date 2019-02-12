@@ -7,12 +7,6 @@ namespace Company.Project.Entities.Concrete.ClientManagment
     public class Client : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the Current Customer identifier
-        /// </summary>
-        public Customer Customer { get; set; }
-
-
-        /// <summary>
         /// Gets or sets the Current ClientNumber identifier
         /// </summary>
         public int ClientNumber { get; set; }

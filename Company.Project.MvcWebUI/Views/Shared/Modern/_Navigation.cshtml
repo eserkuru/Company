@@ -10,21 +10,30 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li><a href="@Url.Action("Index","Client")">Organisations</a></li>
-                        <li><a href="components-widgets.html">Calendar</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="membership" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Membership</a>
+                            <ul class="dropdown-menu" aria-labelledby="membership">
+                                <li><a href="@Url.Action("Index","Plan")">Plans</a></li>
+                                <li><a href="@Url.Action("Index","Invoice")">Invoices</a></li>
+                                <li><a href="@Url.Action("Index","User")">Users</a></li>
+                                <li><a href="#">Authorities</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" href="#" id="reports" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
                             <ul class="dropdown-menu" aria-labelledby="reports">
-                                <li><a href="#">Employees Reports</a></li>
-                                <li><a href="#">Current Account Reports</a></li>
-                                <li><a href="#">User Reports</a></li>
+                                <li><a href="@Url.Action("Index","Event")">Calendar</a></li>
+                                <li><a href="@Url.Action("Employee","Report")">Employees Reports</a></li>
+                                <li><a href="@Url.Action("Account","Report")">Account Reports</a></li>
+                                <li><a href="@Url.Action("User","Report")">User Reports</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" href="#" id="settings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
                             <ul class="dropdown-menu" aria-labelledby="settings">
-                                <li><a href="@Url.Action("Index","User")">Users</a></li>
-                                <li><a href="#">Authorities</a></li>
-                                <li><a href="#">Payment Methods</a></li>
+                                <li><a href="@Url.Action("Index","Currency")">Currency Settings</a></li>
+                                <li><a href="@Url.Action("Index","Document")">Document Settings</a></li>
+                                <li><a href="@Url.Action("Index","Payment")">Payment Settings</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -8,6 +8,7 @@ namespace Company.Project.Entities.Concrete.ClientManagment
 {
     public class BranchContact : Contact
     {
+
         /// <summary>
         /// Gets or sets the Current Branch identifier
         /// </summary>
