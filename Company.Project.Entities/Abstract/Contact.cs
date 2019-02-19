@@ -1,22 +1,41 @@
 ﻿using Company.Core.Entities;
+using Company.Project.Entities.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Company.Project.Entities.Abstract
 {
+    /// <summary>
+    /// Represents a contact
+    /// </summary>
     public abstract class Contact : BaseEntity
     {
-        public PhoneNumberType PhoneNumberType { get; set; }
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
-    }
 
-    public enum PhoneNumberType
-    {
-        GSM = 1,
-        LandPhone = 2,
-        FAX = 3,
-        PBX = 4
+        #region Properties
+
+        /// <summary>
+        /// Gets or sets the phone number type
+        /// </summary>
+        public PhoneNumberType PhoneNumberType { get; set; }
+
+        /// <summary>
+        /// Gets or sets the phone number
+        /// </summary>
+        public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// Gets or sets the e-mail
+        /// </summary>
+        public string Email { get; set; }
+
+        #endregion
+
+        #region Navigation Properties
+
+        /// No relation properties
+
+        #endregion
+
     }
 }

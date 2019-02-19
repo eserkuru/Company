@@ -6,41 +6,35 @@ using System.Text;
 
 namespace Company.Project.Entities.Concrete.ClientManagment
 {
-    public class Branch : BaseEntity
+    /// <summary>
+    /// Represents a branch
+    /// </summary>
+    public class Branch : Address
     {
+
+        #region  properties
+
+        /// Comes from the base class
+        /// string  : Description
+        /// string  : PostalCode
+        /// Country : Country
+        /// City    : City
+        /// Town    : Town
+
         /// <summary>
-        /// Gets or sets the Current Name identifier
+        /// Gets or sets the name
         /// </summary>
         public string Name { get; set; }
 
-        /// <summary>
-        /// Gets or sets the Current Description identifier
-        /// </summary>
-        public string Description { get; set; }
+        #endregion
+
+        #region Navigation properties
 
         /// <summary>
-        /// Gets or sets the Current Town identifier
-        /// </summary>
-        public string Town { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Current City identifier
-        /// </summary>
-        public string City { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Current Country identifier
-        /// </summary>
-        public string Country { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Current PostalCode identifier
-        /// </summary>
-        public string PostalCode { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Current Organisation identifier
+        /// Gets or sets the organisation
         /// </summary>
         public Organisation Organisation { get; set; }
+
+        #endregion
     }
 }

@@ -2,15 +2,13 @@
 using System.Text;
 
 namespace Company.Project.Entities.Concrete.ClientManagment
-{ 
+{
+    /// <summary>
+    /// Represents an organisation
+    /// </summary>
     public class Organisation : BaseEntity
     {
-
-        /// <summary>
-        /// Gets or sets the Current Client identifier
-        /// </summary>
-        public virtual Client Client { get; set; }
-
+        #region Properties
 
         /// <summary>
         /// Gets or sets the Current Name identifier
@@ -51,5 +49,16 @@ namespace Company.Project.Entities.Concrete.ClientManagment
         /// Gets or sets the Current CRSNumber identifier
         /// </summary>
         public string CRSNumber { get; set; }
+
+        #endregion
+
+        #region Navigation Properties
+
+        /// <summary>
+        /// Gets or sets the Current Client identifier
+        /// </summary>
+        public virtual Client Client { get; set; }
+
+        #endregion
     }
 }

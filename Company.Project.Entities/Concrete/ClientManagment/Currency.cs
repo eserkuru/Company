@@ -6,28 +6,40 @@ using System.Text;
 
 namespace Company.Project.Entities.Concrete.ClientManagment
 {
+    /// <summary>
+    /// Represents a currency
+    /// </summary>
     public class Currency : BaseEntity
     {
-        public virtual Client Client { get; set; }
+        #region Properties
 
         /// <summary>
-        /// Gets or sets the Current Name identifier
+        /// Gets or sets the name
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or sets the Current Code identifier
+        /// Gets or sets the code
         /// </summary>
         public string Code { get; set; }
 
         /// <summary>
-        /// Gets or sets the Current Symbol identifier
+        /// Gets or sets the symbol
         /// </summary>
         public string Symbol { get; set; }
 
         /// <summary>
-        /// Gets or sets the Current ExchangeRate identifier
+        /// Gets or sets the exchange rate
         /// </summary>
         public string ExchangeRate { get; set; }
+
+        #region Navigation Properties
+
+        /// <summary>
+        /// Gets or sets the client
+        /// </summary>
+        public virtual Client Client { get; set; }
+
+        #endregion
     }
 }
