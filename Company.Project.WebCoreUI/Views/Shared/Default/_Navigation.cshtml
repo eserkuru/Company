@@ -1,0 +1,49 @@
+﻿<nav class="side-navbar box-scroll sidebar-scroll">
+    <!-- Begin Main Navigation -->
+    <ul class="list-unstyled">
+        <li>
+            <a href="@Url.Action("Index","Client")"><i class="la la-home"></i><span>Home Page</span></a>
+        </li>
+        <li class="active">
+            <a href="@Url.Action("Index","Organisation")"><i class="la la-columns"></i><span>Dashboard</span></a>
+        </li>
+        <li>
+            <a href="@Url.Action("Index","Branches")"><i class="la la-building"></i><span>Branches</span></a>
+        </li>
+    </ul>
+    <span class="heading">Applications</span>
+    <ul class="list-unstyled">
+        <li>
+            <a href="#dropdown-humanresources" aria-expanded="false" data-toggle="collapse"><i class="la la-group"></i><span>Human Resources</span></a>
+            <ul id="dropdown-humanresources" class="collapse list-unstyled pt-0">
+                <li><a href="@Url.Action("Dashboard","Unit", new { Area = "HumanResources" })">Dashboard</a></li>
+                <li><a href="@Url.Action("Index","Unit", new { Area = "HumanResources" })">Units</a></li>
+                <li><a href="@Url.Action("Index","Employee", new { Area = "HumanResources" })">Employees</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#dropdown-accounting" aria-expanded="false" data-toggle="collapse"><i class="la la-money"></i><span>Accounting</span></a>
+            <ul id="dropdown-accounting" class="collapse list-unstyled pt-0">
+                <li><a href="@Url.Action("Dashboard","Account", new { Area = "Accounting" })">Dashboard</a></li>
+                <li><a href="@Url.Action("Index","Account", new { Area = "Accounting" })">Accounts</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#dropdown-invoicing" aria-expanded="false" data-toggle="collapse"><i class="la la-file-archive-o"></i><span>Invoicing</span></a>
+            <ul id="dropdown-invoicing" class="collapse list-unstyled pt-0">
+                <li><a href="@Url.Action("Dashboard","Invoice", new { Area = "Invoicing" })">Dashboard</a></li>
+                <li><a href="@Url.Action("Index","Invoice", new { Area = "Invoicing" })">Invoices</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#dropdown-inventory" aria-expanded="false" data-toggle="collapse"><i class="la la-barcode"></i><span>Inventory</span></a>
+            <ul id="dropdown-inventory" class="collapse list-unstyled pt-0">
+                <li><a href="@Url.Action("Dashboard","Fixture", new { Area = "Inventory" })">Dashboard</a></li>
+                <li><a href="@Url.Action("Index","Fixture", new { Area = "Inventory" })">Fixtures</a></li>
+                <li><a href="@Url.Action("Index","Brand", new { Area = "Inventory" })">Brands</a></li>
+                <li><a href="@Url.Action("Index","BrandModel", new { Area = "Inventory" })">Models</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- End Main Navigation -->
+</nav>

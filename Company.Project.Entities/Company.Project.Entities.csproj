@@ -9,8 +9,4 @@
     <ProjectReference Include="..\Company.Manager.Entities\Company.Manager.Entities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Concrete\Invoicing\" />
-  </ItemGroup>
-
 </Project>

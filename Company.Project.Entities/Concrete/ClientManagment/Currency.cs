@@ -32,6 +32,8 @@ namespace Company.Project.Entities.Concrete.ClientManagment
         /// Gets or sets the exchange rate
         /// </summary>
         public string ExchangeRate { get; set; }
+        
+        #endregion
 
         #region Navigation Properties
 

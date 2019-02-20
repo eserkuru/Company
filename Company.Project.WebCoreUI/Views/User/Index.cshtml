@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewData["Title"] = "_Index";
+    Layout = "~/Views/Shared/Modern/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Elisyam/assets/css/datatables/datatables.min.css">
+<!-- Begin Page Header-->
+<div class="row">
+    <div class="page-header">
+        <div class="d-flex align-items-center">
+            <h2 class="page-header-title">Users</h2>
+            <div class="page-header-tools">
+                <a class="btn btn-gradient-01" href="@Url.Action("Create","User")">Add New User</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Header -->
+<!-- Begin Page Widgets -->
+<div class="row flex-row">
+    <div class="col-xl-4 col-md-6 col-sm-6">
+        <div class="widget widget-12 has-shadow">
+            <div class="widget-body">
+                <div class="media">
+                    <div class="align-self-center ml-5 mr-5">
+                        <i class="ion-compass text-lastrecord"></i>
+                    </div>
+                    <div class="media-body align-self-center">
+                        <div class="title text-lasrecord">Last Record</div>
+                        <div class="text">David Green</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6 col-sm-6">
+        <div class="widget widget-12 has-shadow">
+            <div class="widget-body">
+                <div class="media">
+                    <div class="align-self-center ml-5 mr-5">
+                        <i class="ion-person text-admin"></i>
+                    </div>
+                    <div class="media-body align-self-center">
+                        <div class="title text-admin">Admin</div>
+                        <div class="number">1,986 admins</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-6 col-sm-6">
+        <div class="widget widget-12 has-shadow">
+            <div class="widget-body">
+                <div class="media">
+                    <div class="align-self-center ml-5 mr-5">
+                        <i class="ion-happy-outline text-user"></i>
+                    </div>
+                    <div class="media-body align-self-center">
+                        <div class="title text-user">Member</div>
+                        <div class="number">23,654 members</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Widgets -->
+<div class="row">
+    <div class="col-xl-12">
+        <!-- Export -->
+        <div class="widget has-shadow">
+            <div class="widget-header bordered no-actions d-flex align-items-center">
+                <h4>User List</h4>
+            </div>
+            <div class="widget-body">
+                <div class="table-responsive">
+                    <table id="export-table" class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th>E-Mail</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Type</th>
+                                <th><span style="width:100px;">Status</span></th>
+                                <th>Last Login</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="text-primary">loribaker@company.com</span></td>
+                                <td>Lori</td>
+                                <td>Baker</td>
+                                <td>Admin</td>
+                                <td><span style="width:100px;"><span class="badge-text badge-text-small success">Active</span></span></td>
+                                <td>12/24/2018</td>
+                                <td class="td-actions">
+                                    <a href="@Url.Action("AddEdit","User")"><i class="la la-edit edit"></i></a>
+                                    <a data-toggle="modal" data-target="#success-modal"><i class="la la-close delete"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-primary">lawrencecrawford@company.com</span></td>
+                                <td>Lawrence</td>
+                                <td>Crawford</td>
+                                <td>Member</td>
+                                <td><span style="width:100px;"><span class="badge-text badge-text-small success">Active</span></span></td>
+                                <td>12/24/2018</td>
+                                <td class="td-actions">
+                                    <a href="@Url.Action("AddEdit","User")"><i class="la la-edit edit"></i></a>
+                                    <a data-toggle="modal" data-target="#success-modal"><i class="la la-close delete"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="text-primary">samuelwalker@company.com</span></td>
+                                <td>Samuel</td>
+                                <td>Crawford</td>
+                                <td>Member</td>
+                                <td><span style="width:100px;"><span class="badge-text badge-text-small danger">Passive</span></span></td>
+                                <td>12/24/2018</td>
+                                <td class="td-actions">
+                                    <a href="@Url.Action("AddEdit","User")"><i class="la la-edit edit"></i></a>
+                                    <a data-toggle="modal" data-target="#success-modal"><i class="la la-close delete"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- End Export -->
+    </div>
+</div>
+<!-- End Row -->
+<!-- Begin Success Modal -->
+<div id="success-modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <div class="sa-icon sa-success animate" style="display: block;">
+                    <span class="sa-line sa-tip animateWarningTip"></span>
+                    <span class="sa-line sa-long animateWarningLong"></span>
+                    <div class="sa-placeholder"></div>
+                    <div class="sa-fix"></div>
+                </div>
+                <div class="section-title mt-5 mb-2">
+                    <h2 class="text-gradient-02">Warning!</h2>
+                </div>
+                <p class="mb-5">Are you sure you want to delete the record?</p>
+                <button type="button" class=" btn btn-gradient-01 mr-1 mb-2" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-primary ripple mr-1 mb-2" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Success Modal -->
+<!-- Begin Vendor Js -->
+<script src="~/Elisyam/assets/vendors/js/base/jquery.min.js"></script>
+<script src="~/Elisyam/assets/vendors/js/base/core.min.js"></script>
+<!-- End Vendor Js -->
+<!-- Begin Page Vendor Js -->
+<script src="~/Elisyam/assets/vendors/js/datatables/datatables.min.js"></script>
+<!--<script src="~/Elisyam/assets/vendors/js/datatables/dataTables.buttons.min.js"></script>
+<script src="~/Elisyam/assets/vendors/js/datatables/jszip.min.js"></script>
+<script src="~/Elisyam/assets/vendors/js/nicescroll/nicescroll.min.js"></script>
+<script src="~/Elisyam/assets/vendors/js/datatables/vfs_fonts.js"></script>
+<script src="~/Elisyam/assets/vendors/js/datatables/buttons.html5.min.js"></script>
+<script src="~/Elisyam/assets/vendors/js/datatables/pdfmake.min.js"></script>-->
+<script src="~/Elisyam/assets/vendors/js/datatables/buttons.print.min.js"></script>
+<script src="~/Elisyam/assets/vendors/js/app/app.min.js"></script>
+<!-- End Page Vendor Js -->
+<!-- Begin Page Snippets -->
+<script src="~/Elisyam/assets/js/components/tables/tables.js"></script>
+<!-- End Page Snippets -->
