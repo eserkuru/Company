@@ -1,0 +1,140 @@
+﻿<aside class="left-side sidebar-offcanvas">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="~/AdminLTE/img/avatar3.png" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+                <p>Hello, Jane</p>
+
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search..." />
+                <span class="input-group-btn">
+                    <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="active">
+                <a href="@Url.Action("Index","Home",new {Area = "" })">
+                    <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-book"></i>
+                    <span>Catalog</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Products</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Categories</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Manufacturers</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Product reviews</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Product tags</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Attiributes</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>Sales</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Orders</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Recurring payments</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Gift cards</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Shopping carts</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <span>Customers</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Customers</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Customer roles</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Online customers</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Activity log</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Attiributes</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-tags"></i>
+                    <span>Promotions</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Discounts</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Affiliates</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Campaigns</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-gears"></i>
+                    <span>Configuration</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Countries</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Languages</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Currencies</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Payment Methods</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Tax</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-code"></i>
+                    <span>System</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Log</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Warnings</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Maintenance</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Schedule Tasks</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-bar-chart-o"></i>
+                    <span>Reports</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Country sales</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Best modules</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Customer reports</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Schedule Tasks</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-question-circle"></i>
+                    <span>Help</span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i> Help Topics</a></li>
+                    <li><a href="@Url.Action("Index","Home",new {Area = "Helpdesk" })"><i class="fa fa-angle-double-right"></i> Support Center</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
