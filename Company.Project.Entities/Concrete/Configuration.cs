@@ -1,7 +1,7 @@
 ﻿using Company.Core.Entities;
 using System;
 
-namespace Company.Project.Entities.Concrete.ClientManagment
+namespace Company.Project.Entities.Concrete
 {
     public class Configuration : BaseEntity
     {

@@ -1,5 +1,4 @@
 ﻿using Company.Core.Entities;
-using Company.Project.Entities.Concrete.ClientManagment;
 using System;
 using System.Collections.Generic;
 using System.Text;

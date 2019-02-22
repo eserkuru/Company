@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete.ClientManagment
+namespace Company.Project.Entities.Concrete
 {
     /// <summary>
     /// Represents a currency

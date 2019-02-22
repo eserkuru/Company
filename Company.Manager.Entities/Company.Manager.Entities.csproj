@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Concrete\Helpdesk\" />
+    <Folder Include="Concrete\Wiki\" />
     <Folder Include="Concrete\Store\" />
   </ItemGroup>
 

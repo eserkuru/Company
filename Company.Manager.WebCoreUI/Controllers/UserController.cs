@@ -12,5 +12,10 @@ namespace Company.Manager.WebCoreUI.Controllers
         {
             return View();
         }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
     }
 }

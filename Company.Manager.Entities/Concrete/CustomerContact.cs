@@ -1,16 +1,13 @@
-﻿using Company.Core.Entities;
-using Company.Project.Entities.Abstract;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Company.Manager.Entities.Abstract;
 
-namespace Company.Project.Entities.Concrete.ClientManagment
+namespace Company.Manager.Entities.Concrete
 {
     /// <summary>
-    /// Represents a branch contact
+    /// Represents an customer contact
     /// </summary>
-    public class BranchContact : Contact
+    public class CustomerContact : Contact
     {
+
         #region Properties
 
         /// Comes from the base class
@@ -23,9 +20,9 @@ namespace Company.Project.Entities.Concrete.ClientManagment
         #region Navigation Properties
 
         /// <summary>
-        /// Gets or sets the branch
+        /// Gets or sets the customer
         /// </summary>
-        public virtual Branch Branch { get; set; }
+        public virtual Customer Customer { get; set; }
 
         #endregion
     }

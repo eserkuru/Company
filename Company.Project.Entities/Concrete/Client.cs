@@ -1,8 +1,7 @@
 ﻿using Company.Core.Entities;
-using Company.Manager.Entities.Concrete.CRM;
 using System;
 
-namespace Company.Project.Entities.Concrete.ClientManagment
+namespace Company.Project.Entities.Concrete
 {
     /// <summary>
     /// Represents a client
@@ -14,7 +13,7 @@ namespace Company.Project.Entities.Concrete.ClientManagment
         /// <summary>
         /// Gets or sets the client number
         /// </summary>
-        public int ClientNumber { get; set; }
+        public int CustomerNumber { get; set; }
 
         /// <summary>
         /// Gets or sets the owner 
@@ -30,6 +29,11 @@ namespace Company.Project.Entities.Concrete.ClientManagment
         /// Gets or sets the closing date
         /// </summary>
         public DateTime ClosingDate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the customer
+        /// </summary>
+        public Guid CustomerGuid { get; set; }
 
         #endregion
 

@@ -1,11 +1,15 @@
 ﻿using Company.Core.Entities;
+using Company.Project.Entities.Concrete.Accounting;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete.ClientManagment
+namespace Company.Project.Entities.Concrete
 {
-    public class Module : BaseEntity
+    /// <summary>
+    /// Represents a document
+    /// </summary>
+    public class Document : BaseEntity
     {
         #region Properties
 

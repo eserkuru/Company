@@ -3,12 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete.HumanResources
+namespace Company.Project.Entities.Concrete
 {
-    /// <summary>
-    /// Represents a unit
-    /// </summary>
-    public class Unit : BaseEntity
+    public class Module : BaseEntity
     {
         #region Properties
 
@@ -19,18 +16,12 @@ namespace Company.Project.Entities.Concrete.HumanResources
 
         #endregion
 
-
         #region Navigation Properties
 
         /// <summary>
-        /// Gets or sets the organisation
+        /// Gets or sets the client
         /// </summary>
-        public Organisation Organisation { get; set; }
-
-        /// <summary>
-        /// Gets or sets the branch
-        /// </summary>
-        public Branch Branch { get; set; }
+        public virtual Client Client { get; set; }
 
         #endregion
     }

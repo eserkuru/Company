@@ -1,9 +1,5 @@
 ﻿using Company.Core.Entities;
 using Company.Project.Entities.Abstract;
-using Company.Project.Entities.Concrete.ClientManagment;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Company.Project.Entities.Concrete.Invoicing
 {

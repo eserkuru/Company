@@ -1,13 +1,12 @@
-﻿using Company.Project.Entities.Abstract;
+﻿using Company.Manager.Entities.Abstract;
 
-namespace Company.Project.Entities.Concrete.Accounting
+namespace Company.Manager.Entities.Concrete
 {
     /// <summary>
-    /// Represents an account address
+    /// Represents a customer address
     /// </summary>
-    public class AccountAddress : Address
+    public class CustomerAddress: Address
     {
-
         #region Properties
 
         /// Comes from the base class
@@ -22,9 +21,9 @@ namespace Company.Project.Entities.Concrete.Accounting
         #region Navigation Properties
 
         /// <summary>
-        /// Gets or sets the account
+        /// Gets or sets the customer
         /// </summary>
-        public virtual Account Account { get; set; }
+        public virtual Customer Customer { get; set; }
 
         #endregion
 

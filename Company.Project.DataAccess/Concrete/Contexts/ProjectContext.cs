@@ -1,12 +1,9 @@
 ﻿using Company.Core.Entities.Address;
+using Company.Project.Entities.Concrete;
 using Company.Project.Entities.Concrete.Accounting;
-using Company.Project.Entities.Concrete.ClientManagment;
 using Company.Project.Entities.Concrete.HumanResources;
 using Company.Project.Entities.Concrete.Inventory;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Company.Project.DataAccess.Concrete.Contexts
 {

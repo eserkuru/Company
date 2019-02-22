@@ -1,15 +1,14 @@
 ﻿using Company.Core.Entities;
-using Company.Project.Entities.Concrete.Accounting;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete.ClientManagment
+namespace Company.Manager.Entities.Concrete
 {
     /// <summary>
-    /// Represents a document
+    /// Represents a category
     /// </summary>
-    public class Document : BaseEntity
+    public class Category : BaseEntity
     {
         #region Properties
 
@@ -18,15 +17,22 @@ namespace Company.Project.Entities.Concrete.ClientManagment
         /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// Gets or sets the description
+        /// </summary>
+        public string Description { get; set; }
+
         #endregion
 
         #region Navigation Properties
 
         /// <summary>
-        /// Gets or sets the client
+        /// Gets or sets the parent category identifier
         /// </summary>
-        public virtual Client Client { get; set; }
+
+        public Category ParentCategory { get; set; }
 
         #endregion
+
     }
 }
