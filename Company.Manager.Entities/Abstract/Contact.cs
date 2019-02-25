@@ -17,7 +17,7 @@ namespace Company.Manager.Entities.Abstract
         /// <summary>
         /// Gets or sets the phone number type
         /// </summary>
-        public PhoneNumberType PhoneNumberType { get; set; }
+        public int PhoneNumberTypeId { get; set; }
 
         /// <summary>
         /// Gets or sets the phone number
@@ -31,9 +31,20 @@ namespace Company.Manager.Entities.Abstract
 
         #endregion
 
+
         #region Navigation Properties
 
         /// No relation properties
+
+        #endregion
+
+        #region Custom Properties
+
+        public PhoneNumberType PhoneNumberType
+        {
+            get => (PhoneNumberType)PhoneNumberTypeId;
+            set => PhoneNumberTypeId = (int)value;
+        }
 
         #endregion
 

@@ -1,7 +1,7 @@
 ﻿using Company.Core.Entities;
 using System;
 
-namespace Company.Project.Entities.Concrete
+namespace Company.Project.Entities.Concrete.Admin
 {
     /// <summary>
     /// Represents a client

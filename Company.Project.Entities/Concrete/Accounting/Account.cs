@@ -1,7 +1,5 @@
 ﻿using Company.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Company.Project.Entities.Concrete.Admin;
 
 namespace Company.Project.Entities.Concrete.Accounting
 {

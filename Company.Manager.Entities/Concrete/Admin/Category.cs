@@ -1,40 +1,38 @@
-﻿using System;
+﻿using Company.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete
+namespace Company.Manager.Entities.Concrete.Admin
 {
     /// <summary>
-    /// Represents an event
+    /// Represents a category
     /// </summary>
-    public class Event
+    public class Category : BaseEntity
     {
         #region Properties
 
         /// <summary>
-        /// Gets or sets the title
+        /// Gets or sets the name
         /// </summary>
-        public string Title { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the description
         /// </summary>
         public string Description { get; set; }
 
-        /// <summary>
-        /// Gets or sets the event time
-        /// </summary>
-        public DateTime EventTime { get; set; }
-
         #endregion
 
         #region Navigation Properties
 
         /// <summary>
-        /// Gets or sets the client
+        /// Gets or sets the parent category identifier
         /// </summary>
-        public virtual Client Client { get; set; }
+
+        public Category ParentCategory { get; set; }
 
         #endregion
+
     }
 }

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Manager.Entities.Concrete
+namespace Company.Manager.Entities.Concrete.Admin
 {
     /// <summary>
     /// Represents a manufacturer

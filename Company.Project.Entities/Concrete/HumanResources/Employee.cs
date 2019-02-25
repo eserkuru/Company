@@ -1,4 +1,5 @@
 ﻿using Company.Core.Entities;
+using Company.Project.Entities.Concrete.Admin;
 using System;
 
 namespace Company.Project.Entities.Concrete.HumanResources

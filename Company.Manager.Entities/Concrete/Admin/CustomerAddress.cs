@@ -1,6 +1,6 @@
 ﻿using Company.Manager.Entities.Abstract;
 
-namespace Company.Manager.Entities.Concrete
+namespace Company.Manager.Entities.Concrete.Admin
 {
     /// <summary>
     /// Represents a customer address

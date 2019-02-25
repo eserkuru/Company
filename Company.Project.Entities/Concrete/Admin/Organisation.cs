@@ -1,7 +1,7 @@
 ﻿using Company.Core.Entities;
 using System.Text;
 
-namespace Company.Project.Entities.Concrete
+namespace Company.Project.Entities.Concrete.Admin
 {
     /// <summary>
     /// Represents an organisation

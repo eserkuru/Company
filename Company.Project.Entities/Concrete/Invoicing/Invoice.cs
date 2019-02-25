@@ -1,5 +1,5 @@
 ﻿using Company.Core.Entities;
-using Company.Project.Entities.Abstract;
+using Company.Project.Entities.Concrete.Admin;
 
 namespace Company.Project.Entities.Concrete.Invoicing
 {
@@ -40,11 +40,6 @@ namespace Company.Project.Entities.Concrete.Invoicing
         /// Gets or sets the organisation
         /// </summary>
         public virtual Organisation Organisation { get; set; }
-
-        /// <summary>
-        /// Gets or sets the address
-        /// </summary>
-        public virtual Address Address { get; set; }
 
         #endregion
     }

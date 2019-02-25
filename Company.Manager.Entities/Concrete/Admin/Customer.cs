@@ -2,7 +2,7 @@
 using Company.Core.Entities.Address;
 using Company.Manager.Entities.Enums;
 
-namespace Company.Manager.Entities.Concrete
+namespace Company.Manager.Entities.Concrete.Admin
 {
     /// <summary>
     /// Represents a customer
@@ -12,14 +12,9 @@ namespace Company.Manager.Entities.Concrete
         #region Properties
 
         /// <summary>
-        /// Gets or sets a value indicating whether the customer is active
-        /// </summary>
-        public bool Active { get; set; }
-
-        /// <summary>
         /// Gets or sets the customer type
         /// </summary>
-        public CustomerType CustomerType { get; set; }
+        public int CustomerTypeId { get; set; }
 
         /// <summary>
         /// Gets or sets the first name
@@ -61,6 +56,28 @@ namespace Company.Manager.Entities.Concrete
         public Country Nationality { get; set; }
 
         // => User
+
+        #endregion
+
+        #region Status Properties
+
+        /// <summary>
+        /// Gets or sets a value indicating whether the customer is active
+        /// </summary>
+        public bool Active { get; set; }
+
+        #endregion
+
+        #region Custom Properties
+
+        /// <summary>
+        /// Gets or sets the customer type
+        /// </summary>
+        public CustomerType CustomerType
+        {
+            get => (CustomerType)CustomerTypeId;
+            set => CustomerTypeId = (int)value;
+        }
 
         #endregion
     }

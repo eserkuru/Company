@@ -1,10 +1,6 @@
 ﻿using Company.Core.Entities;
-using Company.Project.Entities.Concrete.Accounting;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Company.Project.Entities.Concrete
+namespace Company.Project.Entities.Concrete.Admin
 {
     /// <summary>
     /// Represents a document

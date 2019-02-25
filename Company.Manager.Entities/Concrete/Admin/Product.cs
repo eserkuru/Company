@@ -4,13 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Company.Manager.Entities.Concrete
+namespace Company.Manager.Entities.Concrete.Admin
 {
     /// <summary>
     /// Represents a product
     /// </summary>
     public class Product : BaseEntity
     {
+        #region Properties
         /// <summary>
         /// Gets or sets the name
         /// </summary>
@@ -148,10 +149,18 @@ namespace Company.Manager.Entities.Concrete
         /// </summary>
         public int ProductTypeId { get; set; }
 
+        #endregion
+
+        #region Navigation Properties
+
         /// <summary>
         /// Gets or sets the parent product identifier. It's used to identify associated products (only with "grouped" products)
         /// </summary>
-        public int ParentGroupedProductId { get; set; }
+        public Product ParentGroupedProductId { get; set; }
+
+        #endregion
+
+        #region Custom Properties
 
         /// <summary>
         /// Gets or sets the product type
@@ -162,5 +171,6 @@ namespace Company.Manager.Entities.Concrete
             set => ProductTypeId = (int)value;
         }
 
+        #endregion
     }
 }
