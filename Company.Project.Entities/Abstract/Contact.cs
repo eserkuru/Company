@@ -37,6 +37,15 @@ namespace Company.Project.Entities.Abstract
 
         #endregion
 
+        #region Status Properties
+
+        /// <summary>
+        /// Gets or sets the primary
+        /// </summary>
+        public bool Primary { get; set; }
+
+        #endregion
+
         #region Custom Properties
 
         public PhoneNumberType PhoneNumberType

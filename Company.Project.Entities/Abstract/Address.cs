@@ -29,9 +29,9 @@ namespace Company.Project.Entities.Abstract
         #region Navigation Properties
 
         /// <summary>
-        /// Gets or sets the town
+        /// Gets or sets the country
         /// </summary>
-        public Town Town { get; set; }
+        public Country Country { get; set; }
 
         /// <summary>
         /// Gets or sets the city
@@ -39,10 +39,15 @@ namespace Company.Project.Entities.Abstract
         public City City { get; set; }
 
         /// <summary>
-        /// Gets or sets the country
+        /// Gets or sets the town
         /// </summary>
-        public Country Country { get; set; }
+        public Town Town { get; set; }
 
         #endregion
+
+        /// <summary>
+        /// Gets or sets the primary
+        /// </summary>
+        public bool Primary { get; set; }
     }
 }

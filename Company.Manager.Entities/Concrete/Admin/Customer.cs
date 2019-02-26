@@ -17,6 +17,11 @@ namespace Company.Manager.Entities.Concrete.Admin
         public int CustomerTypeId { get; set; }
 
         /// <summary>
+        /// Gets or sets the customer name (First and last name or Company name)
+        /// </summary>
+        public string CustomerName { get; set; }
+
+        /// <summary>
         /// Gets or sets the first name
         /// </summary>
         public string FirstName { get; set; }

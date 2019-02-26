@@ -29,6 +29,11 @@ namespace Company.Manager.Entities.Abstract
         /// </summary>
         public string Email { get; set; }
 
+        /// <summary>
+        /// Gets or sets the primary
+        /// </summary>
+        public bool Primary { get; set; }
+
         #endregion
 
 
