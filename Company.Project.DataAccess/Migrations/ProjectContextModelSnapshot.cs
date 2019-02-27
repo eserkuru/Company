@@ -34,6 +34,8 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("CreatedBy");
 
+                    b.Property<bool>("IsActive");
+
                     b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Modified");
@@ -41,6 +43,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -60,6 +66,8 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("CreatedBy");
 
+                    b.Property<bool>("IsActive");
+
                     b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Modified");
@@ -67,6 +75,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -88,6 +100,8 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("CreatedBy");
 
+                    b.Property<bool>("IsActive");
+
                     b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Modified");
@@ -95,6 +109,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -136,6 +154,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("TradeName");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("AccountTypeId");
@@ -172,7 +194,13 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("PostalCode");
 
+                    b.Property<bool>("Primary");
+
                     b.Property<Guid?>("TownId");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -210,7 +238,11 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<int>("PhoneNumberType");
 
-                    b.Property<int>("PhoneNumberTypeId");
+                    b.Property<bool>("Primary");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -237,6 +269,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<string>("TypeCode");
 
                     b.Property<string>("TypeName");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -268,6 +304,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<DateTime>("TransactionTime");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
@@ -297,6 +337,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<Guid?>("TargetAccountId");
 
                     b.Property<DateTime>("TransferTime");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -334,7 +378,13 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("PostalCode");
 
+                    b.Property<bool>("Primary");
+
                     b.Property<Guid?>("TownId");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -372,7 +422,11 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<int>("PhoneNumberType");
 
-                    b.Property<int>("PhoneNumberTypeId");
+                    b.Property<bool>("Primary");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -405,6 +459,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Owner");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -442,6 +500,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("ModifiedBy");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("ClientId");
@@ -474,6 +536,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("Symbol");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("ClientId");
@@ -499,6 +565,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -530,6 +600,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("Title");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("ClientId");
@@ -555,6 +629,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -596,6 +674,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("TradeNumber");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("ClientId");
@@ -636,6 +718,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<Guid?>("OrganisationId");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.Property<Guid?>("UnitsId");
 
                     b.HasKey("Id");
@@ -672,6 +758,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<Guid?>("OrganisationId");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("BranchId");
@@ -696,6 +786,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("ModifiedBy");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.ToTable("Brands");
@@ -717,6 +811,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<string>("Modified");
 
                     b.Property<string>("ModifiedBy");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -745,6 +843,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<Guid?>("OrganisationId");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -784,6 +886,10 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<decimal>("TotalUnitPriceInclTax");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("OrganisationId");
@@ -816,7 +922,13 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("PostalCode");
 
+                    b.Property<bool>("Primary");
+
                     b.Property<Guid?>("TownId");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -855,6 +967,10 @@ namespace Company.Project.DataAccess.Migrations
                     b.Property<decimal>("PriceInclTax");
 
                     b.Property<int>("Quantity");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<decimal>("UnitPriceExclTax");
 

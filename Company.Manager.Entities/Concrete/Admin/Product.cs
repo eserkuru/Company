@@ -12,6 +12,12 @@ namespace Company.Manager.Entities.Concrete.Admin
     public class Product : BaseEntity
     {
         #region Properties
+
+        /// <summary>
+        /// Gets or sets the product type
+        /// </summary>
+        public ProductType ProductType { get; set; }
+
         /// <summary>
         /// Gets or sets the name
         /// </summary>
@@ -144,11 +150,6 @@ namespace Company.Manager.Entities.Concrete.Admin
         /// </summary>
         public bool Published { get; set; }
 
-        /// <summary>
-        /// Gets or sets the product type identifier
-        /// </summary>
-        public int ProductTypeId { get; set; }
-
         #endregion
 
         #region Navigation Properties
@@ -162,14 +163,7 @@ namespace Company.Manager.Entities.Concrete.Admin
 
         #region Custom Properties
 
-        /// <summary>
-        /// Gets or sets the product type
-        /// </summary>
-        public ProductType ProductType
-        {
-            get => (ProductType)ProductTypeId;
-            set => ProductTypeId = (int)value;
-        }
+
 
         #endregion
     }

@@ -1,9 +1,10 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Company.Manager.DataAccess.Migrations
 {
-    public partial class first : Migration
+    public partial class cdb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,6 +13,8 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -37,13 +40,16 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
                     ModifiedBy = table.Column<string>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     Name = table.Column<string>(nullable: true),
-                    Code = table.Column<string>(nullable: true)
+                    Code = table.Column<string>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -55,6 +61,8 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -74,11 +82,14 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
                     ModifiedBy = table.Column<string>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
+                    ProductType = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     ShortDescription = table.Column<string>(nullable: true),
                     FullDescription = table.Column<string>(nullable: true),
@@ -105,9 +116,7 @@ namespace Company.Manager.DataAccess.Migrations
                     AvailableEndDateTimeUtc = table.Column<DateTime>(nullable: true),
                     DisplayOrder = table.Column<int>(nullable: false),
                     Published = table.Column<bool>(nullable: false),
-                    ProductTypeId = table.Column<int>(nullable: false),
-                    ParentGroupedProductIdId = table.Column<Guid>(nullable: true),
-                    ProductType = table.Column<int>(nullable: false)
+                    ParentGroupedProductIdId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -125,6 +134,8 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -133,7 +144,8 @@ namespace Company.Manager.DataAccess.Migrations
                     Name = table.Column<string>(nullable: true),
                     Code = table.Column<string>(nullable: true),
                     CountryCode = table.Column<string>(nullable: true),
-                    CountryId = table.Column<Guid>(nullable: true)
+                    CountryId = table.Column<Guid>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -151,27 +163,30 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
                     ModifiedBy = table.Column<string>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     CustomerType = table.Column<int>(nullable: false),
+                    CustomerName = table.Column<string>(nullable: true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     Company = table.Column<string>(nullable: true),
                     TaxNumber = table.Column<string>(nullable: true),
                     TaxOffice = table.Column<string>(nullable: true),
                     NationalityId = table.Column<string>(nullable: true),
-                    NationalityId1 = table.Column<Guid>(nullable: true),
+                    CountryId = table.Column<Guid>(nullable: true),
                     Active = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Customers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Customers_Country_NationalityId1",
-                        column: x => x.NationalityId1,
+                        name: "FK_Customers_Country_CountryId",
+                        column: x => x.CountryId,
                         principalTable: "Country",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -182,6 +197,8 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -209,6 +226,8 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -217,7 +236,8 @@ namespace Company.Manager.DataAccess.Migrations
                     Name = table.Column<string>(nullable: true),
                     Code = table.Column<string>(nullable: true),
                     CityCode = table.Column<string>(nullable: true),
-                    CityId = table.Column<Guid>(nullable: true)
+                    CityId = table.Column<Guid>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -235,6 +255,8 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -243,6 +265,7 @@ namespace Company.Manager.DataAccess.Migrations
                     PhoneNumberType = table.Column<int>(nullable: false),
                     PhoneNumber = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
+                    Primary = table.Column<bool>(nullable: false),
                     CustomerId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
@@ -261,6 +284,8 @@ namespace Company.Manager.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -268,9 +293,10 @@ namespace Company.Manager.DataAccess.Migrations
                     IsDeleted = table.Column<bool>(nullable: false),
                     Description = table.Column<string>(nullable: true),
                     PostalCode = table.Column<string>(nullable: true),
-                    TownId = table.Column<Guid>(nullable: true),
-                    CityId = table.Column<Guid>(nullable: true),
                     CountryId = table.Column<Guid>(nullable: true),
+                    CityId = table.Column<Guid>(nullable: true),
+                    TownId = table.Column<Guid>(nullable: true),
+                    Primary = table.Column<bool>(nullable: false),
                     CustomerId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
@@ -338,9 +364,9 @@ namespace Company.Manager.DataAccess.Migrations
                 column: "CustomerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Customers_NationalityId1",
+                name: "IX_Customers_CountryId",
                 table: "Customers",
-                column: "NationalityId1");
+                column: "CountryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_ParentGroupedProductIdId",

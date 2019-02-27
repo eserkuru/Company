@@ -28,5 +28,14 @@ namespace Company.Core.Entities.Address
         // No relation properties
 
         #endregion
+
+        #region Status Properties
+
+        /// <summary>
+        /// Gets or sets the active status
+        /// </summary>
+        public bool IsActive { get; set; }
+
+        #endregion
     }
 }

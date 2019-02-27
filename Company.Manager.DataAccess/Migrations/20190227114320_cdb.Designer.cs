@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Company.Manager.DataAccess.Migrations
 {
     [DbContext(typeof(ManagerContext))]
-    [Migration("20190225103933_first")]
-    partial class first
+    [Migration("20190227114320_cdb")]
+    partial class cdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,6 +36,8 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<string>("CreatedBy");
 
+                    b.Property<bool>("IsActive");
+
                     b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Modified");
@@ -43,6 +45,10 @@ namespace Company.Manager.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -62,6 +68,8 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<string>("CreatedBy");
 
+                    b.Property<bool>("IsActive");
+
                     b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Modified");
@@ -69,6 +77,10 @@ namespace Company.Manager.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -90,6 +102,8 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<string>("CreatedBy");
 
+                    b.Property<bool>("IsActive");
+
                     b.Property<bool>("IsDeleted");
 
                     b.Property<string>("Modified");
@@ -97,6 +111,10 @@ namespace Company.Manager.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -126,6 +144,10 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<Guid?>("ParentCategoryId");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("ParentCategoryId");
@@ -142,9 +164,13 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<string>("Company");
 
+                    b.Property<Guid?>("CountryId");
+
                     b.Property<string>("Created");
 
                     b.Property<string>("CreatedBy");
+
+                    b.Property<string>("CustomerName");
 
                     b.Property<int>("CustomerType");
 
@@ -160,15 +186,17 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<string>("NationalityId");
 
-                    b.Property<Guid?>("NationalityId1");
-
                     b.Property<string>("TaxNumber");
 
                     b.Property<string>("TaxOffice");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
-                    b.HasIndex("NationalityId1");
+                    b.HasIndex("CountryId");
 
                     b.ToTable("Customers");
                 });
@@ -198,7 +226,13 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<string>("PostalCode");
 
+                    b.Property<bool>("Primary");
+
                     b.Property<Guid?>("TownId");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -236,6 +270,12 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<int>("PhoneNumberType");
 
+                    b.Property<bool>("Primary");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
@@ -263,6 +303,10 @@ namespace Company.Manager.DataAccess.Migrations
                     b.Property<string>("ModifiedBy");
 
                     b.Property<string>("Name");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.HasKey("Id");
 
@@ -328,8 +372,6 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<int>("ProductType");
 
-                    b.Property<int>("ProductTypeId");
-
                     b.Property<bool>("Published");
 
                     b.Property<bool>("ShipSeparately");
@@ -339,6 +381,10 @@ namespace Company.Manager.DataAccess.Migrations
                     b.Property<string>("Sku");
 
                     b.Property<int>("TaxCategoryId");
+
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<bool>("UnlimitedDownloads");
 
@@ -374,6 +420,10 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<DateTime?>("StartDateTimeUtc");
 
+                    b.Property<int>("UniqueNumber")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
@@ -404,9 +454,9 @@ namespace Company.Manager.DataAccess.Migrations
 
             modelBuilder.Entity("Company.Manager.Entities.Concrete.Admin.Customer", b =>
                 {
-                    b.HasOne("Company.Core.Entities.Address.Country", "Nationality")
+                    b.HasOne("Company.Core.Entities.Address.Country", "Country")
                         .WithMany()
-                        .HasForeignKey("NationalityId1");
+                        .HasForeignKey("CountryId");
                 });
 
             modelBuilder.Entity("Company.Manager.Entities.Concrete.Admin.CustomerAddress", b =>

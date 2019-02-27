@@ -36,5 +36,15 @@ namespace Company.Core.Entities.Address
         public virtual Country Country { get; set; }
 
         #endregion
+
+        #region Status Properties
+
+        /// <summary>
+        /// Gets or sets the active status
+        /// </summary>
+        public bool IsActive { get; set; }
+
+        #endregion
+
     }
 }

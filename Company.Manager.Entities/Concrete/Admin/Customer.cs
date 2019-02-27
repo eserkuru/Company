@@ -1,6 +1,7 @@
 ﻿using Company.Core.Entities;
 using Company.Core.Entities.Address;
 using Company.Manager.Entities.Enums;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Company.Manager.Entities.Concrete.Admin
 {
@@ -14,7 +15,7 @@ namespace Company.Manager.Entities.Concrete.Admin
         /// <summary>
         /// Gets or sets the customer type
         /// </summary>
-        public int CustomerTypeId { get; set; }
+        public CustomerType CustomerType { get; set; }
 
         /// <summary>
         /// Gets or sets the customer name (First and last name or Company name)
@@ -58,7 +59,7 @@ namespace Company.Manager.Entities.Concrete.Admin
         /// <summary>
         /// Gets or sets the nationality
         /// </summary>
-        public Country Nationality { get; set; }
+        public Country Country { get; set; }
 
         // => User
 
@@ -75,14 +76,7 @@ namespace Company.Manager.Entities.Concrete.Admin
 
         #region Custom Properties
 
-        /// <summary>
-        /// Gets or sets the customer type
-        /// </summary>
-        public CustomerType CustomerType
-        {
-            get => (CustomerType)CustomerTypeId;
-            set => CustomerTypeId = (int)value;
-        }
+
 
         #endregion
     }

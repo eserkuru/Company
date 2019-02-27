@@ -1,9 +1,10 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Company.Project.DataAccess.Migrations
 {
-    public partial class first : Migration
+    public partial class cdb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,6 +13,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -30,6 +33,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -46,6 +51,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -67,13 +74,16 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
                     ModifiedBy = table.Column<string>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
                     Name = table.Column<string>(nullable: true),
-                    Code = table.Column<string>(nullable: true)
+                    Code = table.Column<string>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -85,6 +95,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -108,6 +120,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -138,6 +152,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -165,6 +181,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -189,6 +207,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -215,6 +235,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -239,6 +261,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -270,6 +294,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -278,7 +304,8 @@ namespace Company.Project.DataAccess.Migrations
                     Name = table.Column<string>(nullable: true),
                     Code = table.Column<string>(nullable: true),
                     CountryCode = table.Column<string>(nullable: true),
-                    CountryId = table.Column<Guid>(nullable: true)
+                    CountryId = table.Column<Guid>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -296,6 +323,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -333,6 +362,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -361,6 +392,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -369,7 +402,8 @@ namespace Company.Project.DataAccess.Migrations
                     Name = table.Column<string>(nullable: true),
                     Code = table.Column<string>(nullable: true),
                     CityCode = table.Column<string>(nullable: true),
-                    CityId = table.Column<Guid>(nullable: true)
+                    CityId = table.Column<Guid>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -387,6 +421,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -416,6 +452,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -423,9 +461,10 @@ namespace Company.Project.DataAccess.Migrations
                     IsDeleted = table.Column<bool>(nullable: false),
                     Description = table.Column<string>(nullable: true),
                     PostalCode = table.Column<string>(nullable: true),
-                    TownId = table.Column<Guid>(nullable: true),
-                    CityId = table.Column<Guid>(nullable: true),
                     CountryId = table.Column<Guid>(nullable: true),
+                    CityId = table.Column<Guid>(nullable: true),
+                    TownId = table.Column<Guid>(nullable: true),
+                    Primary = table.Column<bool>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     OrganisationId = table.Column<Guid>(nullable: true)
                 },
@@ -463,6 +502,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -470,9 +511,10 @@ namespace Company.Project.DataAccess.Migrations
                     IsDeleted = table.Column<bool>(nullable: false),
                     Description = table.Column<string>(nullable: true),
                     PostalCode = table.Column<string>(nullable: true),
-                    TownId = table.Column<Guid>(nullable: true),
-                    CityId = table.Column<Guid>(nullable: true),
                     CountryId = table.Column<Guid>(nullable: true),
+                    CityId = table.Column<Guid>(nullable: true),
+                    TownId = table.Column<Guid>(nullable: true),
+                    Primary = table.Column<bool>(nullable: false),
                     InvoiceId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
@@ -509,6 +551,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -552,15 +596,17 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
                     ModifiedBy = table.Column<string>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    PhoneNumberTypeId = table.Column<int>(nullable: false),
+                    PhoneNumberType = table.Column<int>(nullable: false),
                     PhoneNumber = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    PhoneNumberType = table.Column<int>(nullable: false),
+                    Primary = table.Column<bool>(nullable: false),
                     BranchId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
@@ -579,6 +625,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -610,6 +658,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -617,9 +667,10 @@ namespace Company.Project.DataAccess.Migrations
                     IsDeleted = table.Column<bool>(nullable: false),
                     Description = table.Column<string>(nullable: true),
                     PostalCode = table.Column<string>(nullable: true),
-                    TownId = table.Column<Guid>(nullable: true),
-                    CityId = table.Column<Guid>(nullable: true),
                     CountryId = table.Column<Guid>(nullable: true),
+                    CityId = table.Column<Guid>(nullable: true),
+                    TownId = table.Column<Guid>(nullable: true),
+                    Primary = table.Column<bool>(nullable: false),
                     AccountId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
@@ -656,15 +707,17 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
                     ModifiedBy = table.Column<string>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    PhoneNumberTypeId = table.Column<int>(nullable: false),
+                    PhoneNumberType = table.Column<int>(nullable: false),
                     PhoneNumber = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    PhoneNumberType = table.Column<int>(nullable: false),
+                    Primary = table.Column<bool>(nullable: false),
                     AccountId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
@@ -683,6 +736,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -710,6 +765,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),
@@ -742,6 +799,8 @@ namespace Company.Project.DataAccess.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    UniqueNumber = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Created = table.Column<string>(nullable: true),
                     CreatedBy = table.Column<string>(nullable: true),
                     Modified = table.Column<string>(nullable: true),

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using System.Text;
 
@@ -13,6 +14,8 @@ namespace Company.Core.Entities
     {
 
         private Guid _id { get; set; }
+        private int _uniqueNumber { get; set; }
+
         private string _created { get; set; }
         private string _createdBy { get; set; }
         private string _modified { get; set; }
@@ -39,6 +42,16 @@ namespace Company.Core.Entities
                 return this._id;
             }
             set => this._id = value;
+        }
+
+        /// <summary>
+        /// Gets or sets the unique number
+        /// </summary>
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int UniqueNumber
+        {
+            get => this._uniqueNumber;
+            set => this._uniqueNumber = value;
         }
 
         /// <summary>
