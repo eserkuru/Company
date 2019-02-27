@@ -4,6 +4,11 @@
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
 
+@section Styles {
+    <!-- DATA TABLES -->
+    <link href="~/AdminLTE/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+}
+
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h4>
@@ -39,49 +44,114 @@
     <!-- Main row -->
     <div class="row">
         <div class="col-md-12">
-            <div class="content">
-                <div class="box box-primary">
-                    <div class="box-header">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title"> Country </h3>
+                </div>
+                <div class="box-body">
+                    <div class="form-group form-inline">
+                        <div class="row">
+                            <div class="col-md-3 text-right">
+                                <label for="code">Name</label>
+                            </div>
+                            <div class="col-md-7 text-left">
+                                <input type="text" class="form-control" id="name" placeholder="Enter name">
+                            </div>
+                        </div>
                     </div>
-                    <div class="box-body">
-                        <div class="form-group form-inline">
-                            <div class="row">
-                                <div class="col-md-3 text-right">
-                                    <label for="code">Name</label>
-                                </div>
-                                <div class="col-md-7 text-left">
-                                    <input type="text" class="form-control" id="name" placeholder="Enter name">
-                                </div>
+                    <div class="form-group form-inline">
+                        <div class="row">
+                            <div class="col-md-3 text-right">
+                                <label for="code">Code</label>
+                            </div>
+                            <div class="col-md-7 text-left">
+                                <input type="text" class="form-control" id="code" placeholder="Enter code">
                             </div>
                         </div>
-                        <div class="form-group form-inline">
-                            <div class="row">
-                                <div class="col-md-3 text-right">
-                                    <label for="code">Code</label>
-                                </div>
-                                <div class="col-md-7 text-left">
-                                    <input type="text" class="form-control" id="code" placeholder="Enter code">
-                                </div>
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="form-group form-inline">
-                            <div class="row">
-                                <div class="col-md-3 text-right">
-                                    <label>
-                                        Is active?
-                                    </label>
-                                </div>
-                                <div class="col-md-7 text-left">
-                                    <input type="checkbox" />
-                                </div>
+                    <div class="form-group form-inline">
+                        <div class="row">
+                            <div class="col-md-3 text-right">
+                                <label>
+                                    Is active?
+                                </label>
+                            </div>
+                            <div class="col-md-7 text-left">
+                                <input type="checkbox" />
                             </div>
                         </div>
                     </div>
-                </div><!-- /.box -->
-            </div>
-        </div><!-- /.col -->
+                </div>
+            </div><!-- /.box -->
+        </div>
     </div> <!-- /.row -->
+    <!-- Datatable-->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title"> Country's cities</h3>
+                </div>
+                <div class="box-body table-responsive">
+                    <table id="cityList" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>City name</th>
+                                <th>City code</th>
+                                <th>Is active?</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ankara</td>
+                                <td>06</td>
+                                <td><i class="fa fa-check true-icon"></i></td>
+                                <td>
+                                    <a asp-action="Edit" asp-controller="City" asp-area="" class="btn btn-default"><i class="fa fa-edit"></i>Edit</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>İstanbul</td>
+                                <td>34</td>
+                                <td><i class="fa fa-check true-icon"></i></td>
+                                <td>
+                                    <a asp-action="Edit" asp-controller="City" asp-area="" class="btn btn-default"><i class="fa fa-edit"></i>Edit</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>İzmir</td>
+                                <td>35</td>
+                                <td><i class="fa fa-check true-icon"></i></td>
+                                <td>
+                                    <a asp-action="Edit" asp-controller="City" asp-area="" class="btn btn-default"><i class="fa fa-edit"></i>Edit</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+                <div class="box-footer">
+                    <a asp-action="Create" asp-controller="City" asp-area="" class="btn bg-blue">
+                        <i class="fa fa-plus-square"></i>
+                        Add new city
+                    </a>
+                </div>
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div>
 </section><!-- /.content -->
 
+@section Scripts
+    {
+    <!-- DATA TABES SCRIPT -->
+    <script src="~/AdminLTE/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="~/AdminLTE/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
 
+    <!-- page script -->
+    <script type="text/javascript">
+        $(function () {
+            $("#cityList").dataTable();
+        });
+    </script>
+}
