@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Company.Core.Entities.Address
@@ -14,6 +15,7 @@ namespace Company.Core.Entities.Address
         /// <summary>
         /// Gets or sets the country name
         /// </summary>
+        [Required]
         public string Name { get; set; }
 
         /// <summary>

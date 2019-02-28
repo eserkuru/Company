@@ -1,4 +1,4 @@
-﻿
+﻿@model CountryUpdateModel
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
@@ -28,64 +28,67 @@
 
 <!-- Main content -->
 <section class="content">
-
-    <!-- buttons row -->
-    <div class="row pad">
-        <div class="pull-right">
-            <div class="col-xs-12">
-                <a asp-action="Index" asp-controller="Country" asp-area="" class="btn bg-blue">
-                    <i class="fa fa-save"></i>
-                    Save
-                </a>
+    <form asp-area="" asp-controller="Country" asp-action="Edit" method="post" id="country-form">
+        <input asp-for="Country.Id" type="hidden" />
+        <!-- buttons row -->
+        <div class="row pad">
+            <div class="pull-right">
+                <div class="col-xs-12">
+                    <button type="submit" name="save" class="btn bg-blue"> <i class="fa fa-save"></i>  Save</button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- /.row -->
-    <!-- Main row -->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="box box-primary">
-                <div class="box-header">
-                    <h3 class="box-title"> Country </h3>
-                </div>
-                <div class="box-body">
-                    <div class="form-group form-inline">
-                        <div class="row">
-                            <div class="col-md-3 text-right">
-                                <label for="code">Name</label>
-                            </div>
-                            <div class="col-md-7 text-left">
-                                <input type="text" class="form-control" id="name" placeholder="Enter name">
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title"> Country </h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="form-group form-inline">
+                            <div class="row">
+                                <div class="col-md-3 text-right">
+                                    <label for="code">Name</label>
+                                </div>
+                                <div class="col-md-7 text-left">
+                                    <input asp-for="Country.Name" type="text" class="form-control" id="name" placeholder="Enter name">
+                                    <span asp-validation-for="Country.Name"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group form-inline">
-                        <div class="row">
-                            <div class="col-md-3 text-right">
-                                <label for="code">Code</label>
-                            </div>
-                            <div class="col-md-7 text-left">
-                                <input type="text" class="form-control" id="code" placeholder="Enter code">
+                        <div class="form-group form-inline">
+                            <div class="row">
+                                <div class="col-md-3 text-right">
+                                    <label for="code">Code</label>
+                                </div>
+                                <div class="col-md-7 text-left">
+                                    <input asp-for="Country.Code" type="text" class="form-control" id="code" placeholder="Enter code">
+                                    <span asp-validation-for="Country.Code"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="form-group form-inline">
-                        <div class="row">
-                            <div class="col-md-3 text-right">
-                                <label>
-                                    Is active?
-                                </label>
-                            </div>
-                            <div class="col-md-7 text-left">
-                                <input type="checkbox" />
+                        <div class="form-group form-inline">
+                            <div class="row">
+                                <div class="col-md-3 text-right">
+                                    <label>
+                                        Is active?
+                                    </label>
+                                </div>
+                                <div class="col-md-7 text-left">
+                                    <input asp-for="Country.IsActive" type="checkbox" />
+                                    <span asp-validation-for="Country.IsActive"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div><!-- /.box -->
-        </div>
-    </div> <!-- /.row -->
+                </div><!-- /.box -->
+            </div>
+        </div> <!-- /.row -->
+    </form>
+
     <!-- Datatable-->
     <div class="row">
         <div class="col-xs-12">

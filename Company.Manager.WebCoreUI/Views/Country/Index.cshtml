@@ -1,4 +1,4 @@
-﻿
+﻿@model CountryListModel
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
@@ -29,7 +29,7 @@
     <div class="row pad">
         <div class="pull-right">
             <div class="col-xs-12">
-                <a asp-action="Create" asp-controller="Country" asp-area="" class="btn bg-blue">
+                <a asp-area="" asp-controller="Country" asp-action="Create" class="btn bg-blue">
                     <i class="fa fa-plus-square"></i>
                     Add new country
                 </a>
@@ -52,28 +52,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Turkey</td>
-                                <td>90</td>
-                                <td><i class="fa fa-check true-icon"></i></td>
-                                <td>
-                                    <a asp-action="Edit" asp-controller="Country" asp-area="" class="btn btn-default">
-                                        <i class="fa fa-edit"></i>
-                                        Edit
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Japan</td>
-                                <td>56</td>
-                                <td><i class="fa fa-check true-icon"></i></td>
-                                <td>
-                                    <a asp-action="Edit" asp-controller="Country" asp-area="" class="btn btn-default">
-                                        <i class="fa fa-edit"></i>
-                                        Edit
-                                    </a>
-                                </td>
-                            </tr>
+                            @foreach (var country in Model.Countries)
+                            {
+                                <tr countryId="@country.Id">
+                                    <td>@country.Name</td>
+                                    <td>@country.Code</td>
+                                    <td>
+                                        @if (country.IsActive)
+                                        {
+                                            <i class="fa fa-check true-icon"></i>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a asp-area="" asp-controller="Country" asp-action="Edit" asp-route-id="@country.Id" class="btn btn-default">
+                                            <i class="fa fa-edit"></i>
+                                            Edit
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div><!-- /.box-body -->

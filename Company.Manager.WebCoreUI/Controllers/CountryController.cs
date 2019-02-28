@@ -64,7 +64,12 @@ namespace Company.Manager.WebCoreUI.Controllers
         // GET: Country/Edit/5
         public IActionResult Edit(Guid id)
         {
-            return View();
+            var model = new CountryUpdateModel
+            {
+                Country = _countryService.GetById(id)
+            };
+
+            return View(model);
         }
 
         // POST: Country/Edit/5
@@ -74,9 +79,13 @@ namespace Company.Manager.WebCoreUI.Controllers
         {
             try
             {
-                // TODO: Add update logic here
+                if (ModelState.IsValid)
+                {
+                    _countryService.Update(country);
+                    //TempData.Add("message", "Product was successfully updated");
+                }
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Edit));
             }
             catch
             {
