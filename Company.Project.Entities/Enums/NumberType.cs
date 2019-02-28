@@ -7,7 +7,7 @@ namespace Company.Project.Entities.Enums
     /// <summary>
     /// Represents a phone number type
     /// </summary>
-    public enum PhoneNumberType
+    public enum NumberType
     {
         GSM = 1,
         LandPhone = 2,

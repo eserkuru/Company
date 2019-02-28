@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Company.Core.Entities.Address;
+using Company.Manager.Business.Abstract;
+using Company.Manager.WebCoreUI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,16 +12,27 @@ namespace Company.Manager.WebCoreUI.Controllers
 {
     public class CountryController : Controller
     {
+        #region Injection
+
+        private ICountryService _countryService;
+        #endregion
+
+        #region ctor
+
+        public CountryController(ICountryService countryService)
+        {
+            _countryService = countryService;
+        }
+        #endregion
+
         // GET: Country
         public IActionResult Index()
         {
-            return View();
-        }
-
-        // GET: Country/Details/5
-        public IActionResult Details(int id)
-        {
-            return View();
+            var model = new CountryListModel
+            {
+                Countries = _countryService.GetAll()
+            };
+            return View(model);
         }
 
         // GET: Country/Create
@@ -30,11 +44,14 @@ namespace Company.Manager.WebCoreUI.Controllers
         // POST: Country/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(IFormCollection collection)
+        public IActionResult Create(Country country)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (ModelState.IsValid)
+                {
+                    _countryService.Add(country);
+                }
 
                 return RedirectToAction(nameof(Index));
             }
@@ -45,7 +62,7 @@ namespace Company.Manager.WebCoreUI.Controllers
         }
 
         // GET: Country/Edit/5
-        public IActionResult Edit(int id)
+        public IActionResult Edit(Guid id)
         {
             return View();
         }
@@ -53,7 +70,7 @@ namespace Company.Manager.WebCoreUI.Controllers
         // POST: Country/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, IFormCollection collection)
+        public IActionResult Edit(Country country)
         {
             try
             {
@@ -68,7 +85,7 @@ namespace Company.Manager.WebCoreUI.Controllers
         }
 
         // GET: Country/Delete/5
-        public IActionResult Delete(int id)
+        public IActionResult Delete(Guid id)
         {
             return View();
         }

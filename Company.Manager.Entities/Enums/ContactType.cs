@@ -5,13 +5,11 @@ using System.Text;
 namespace Company.Manager.Entities.Enums
 {
     /// <summary>
-    /// Represents a phone number type
+    /// Represents a contact type
     /// </summary>
-    public enum PhoneNumberType
+    public enum ContactType
     {
-        GSM = 10,
-        LandPhone = 20,
-        FAX = 30,
-        PBX = 40
+        Email = 1,
+        Number =2
     }
 }

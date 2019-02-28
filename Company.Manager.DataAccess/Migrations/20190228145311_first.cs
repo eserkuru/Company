@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Company.Manager.DataAccess.Migrations
 {
-    public partial class cdb : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -262,9 +262,9 @@ namespace Company.Manager.DataAccess.Migrations
                     Modified = table.Column<string>(nullable: true),
                     ModifiedBy = table.Column<string>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    PhoneNumberType = table.Column<int>(nullable: false),
-                    PhoneNumber = table.Column<string>(nullable: true),
-                    Email = table.Column<string>(nullable: true),
+                    ContactType = table.Column<int>(nullable: false),
+                    NumberType = table.Column<int>(nullable: false),
+                    Value = table.Column<string>(nullable: true),
                     Primary = table.Column<bool>(nullable: false),
                     CustomerId = table.Column<Guid>(nullable: true)
                 },

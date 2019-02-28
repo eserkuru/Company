@@ -250,13 +250,13 @@ namespace Company.Manager.DataAccess.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("ContactType");
+
                     b.Property<string>("Created");
 
                     b.Property<string>("CreatedBy");
 
                     b.Property<Guid?>("CustomerId");
-
-                    b.Property<string>("Email");
 
                     b.Property<bool>("IsDeleted");
 
@@ -264,15 +264,15 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<string>("ModifiedBy");
 
-                    b.Property<string>("PhoneNumber");
-
-                    b.Property<int>("PhoneNumberType");
+                    b.Property<int>("NumberType");
 
                     b.Property<bool>("Primary");
 
                     b.Property<int>("UniqueNumber")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Value");
 
                     b.HasKey("Id");
 

@@ -26,6 +26,12 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\Company.Manager.Business\Company.Manager.Business.csproj" />
+    <ProjectReference Include="..\Company.Manager.DataAccess\Company.Manager.DataAccess.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
     <Content Update="Views\User\ForgotPassword.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

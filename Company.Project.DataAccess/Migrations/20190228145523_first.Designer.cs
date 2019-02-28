@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Company.Project.DataAccess.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20190227114448_cdb")]
-    partial class cdb
+    [Migration("20190228145523_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -224,11 +224,11 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<Guid?>("AccountId");
 
+                    b.Property<int>("ContactType");
+
                     b.Property<string>("Created");
 
                     b.Property<string>("CreatedBy");
-
-                    b.Property<string>("Email");
 
                     b.Property<bool>("IsDeleted");
 
@@ -236,15 +236,15 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("ModifiedBy");
 
-                    b.Property<string>("PhoneNumber");
-
-                    b.Property<int>("PhoneNumberType");
+                    b.Property<int>("NumberType");
 
                     b.Property<bool>("Primary");
 
                     b.Property<int>("UniqueNumber")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Value");
 
                     b.HasKey("Id");
 
@@ -408,11 +408,11 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<Guid?>("BranchId");
 
+                    b.Property<int>("ContactType");
+
                     b.Property<string>("Created");
 
                     b.Property<string>("CreatedBy");
-
-                    b.Property<string>("Email");
 
                     b.Property<bool>("IsDeleted");
 
@@ -420,15 +420,15 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("ModifiedBy");
 
-                    b.Property<string>("PhoneNumber");
-
-                    b.Property<int>("PhoneNumberType");
+                    b.Property<int>("NumberType");
 
                     b.Property<bool>("Primary");
 
                     b.Property<int>("UniqueNumber")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Value");
 
                     b.HasKey("Id");
 

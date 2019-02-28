@@ -26,4 +26,10 @@
     <Folder Include="Areas\Wiki\Views\" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\Company.Manager.Business\Company.Manager.Business.csproj" />
+    <ProjectReference Include="..\Company.Manager.DataAccess\Company.Manager.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -15,19 +15,19 @@ namespace Company.Project.Entities.Abstract
         #region Properties
 
         /// <summary>
+        /// Gets or sets the contact type
+        /// </summary>
+        public ContactType ContactType { get; set; }
+
+        /// <summary>
         /// Gets or sets the phone number type
         /// </summary>
-        public PhoneNumberType PhoneNumberType { get; set; }
+        public NumberType NumberType { get; set; }
 
         /// <summary>
-        /// Gets or sets the phone number
+        /// Gets or sets the value
         /// </summary>
-        public string PhoneNumber { get; set; }
-
-        /// <summary>
-        /// Gets or sets the e-mail
-        /// </summary>
-        public string Email { get; set; }
+        public string Value { get; set; }
 
         #endregion
 

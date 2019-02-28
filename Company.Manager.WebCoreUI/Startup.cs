@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Company.Manager.Business.Abstract;
+using Company.Manager.Business.Concrete;
+using Company.Manager.DataAccess.Abstract;
+using Company.Manager.DataAccess.Concrete.Contexts;
+using Company.Manager.DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,6 +33,21 @@ namespace Company.Manager.WebCoreUI
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+
+            #region Dals
+
+            services.AddScoped<ICountryDal, EfCountryDal<ManagerContext>>();
+            services.AddScoped<ICityDal, EfCityDal<ManagerContext>>();
+            services.AddScoped<ITownDal, EfTownDal<ManagerContext>>();
+            #endregion
+
+            #region Managers
+
+            services.AddScoped<ICountryService, CountryManager>();
+            services.AddScoped<ICityService, CityManager>();
+            services.AddScoped<ITownService, TownManager>();
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
