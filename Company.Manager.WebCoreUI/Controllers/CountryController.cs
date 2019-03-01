@@ -82,14 +82,14 @@ namespace Company.Manager.WebCoreUI.Controllers
                 if (ModelState.IsValid)
                 {
                     _countryService.Update(country);
-                    //TempData.Add("message", "Product was successfully updated");
                 }
 
                 return RedirectToAction(nameof(Edit));
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                
+                return View(e);
             }
         }
 

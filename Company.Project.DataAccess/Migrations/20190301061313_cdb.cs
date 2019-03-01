@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Company.Project.DataAccess.Migrations
 {
-    public partial class first : Migration
+    public partial class cdb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -81,7 +81,7 @@ namespace Company.Project.DataAccess.Migrations
                     Modified = table.Column<string>(nullable: true),
                     ModifiedBy = table.Column<string>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
                     Code = table.Column<string>(nullable: true),
                     IsActive = table.Column<bool>(nullable: false)
                 },

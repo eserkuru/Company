@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Company.Project.DataAccess.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20190228165610_first")]
-    partial class first
+    [Migration("20190301061313_cdb")]
+    partial class cdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -76,7 +76,8 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("ModifiedBy");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<int>("UniqueNumber")
                         .ValueGeneratedOnAdd()

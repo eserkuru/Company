@@ -1,4 +1,5 @@
-﻿using Company.Manager.Entities.Concrete.Admin;
+﻿using Company.Core.Entities.Address;
+using Company.Manager.Entities.Concrete.Admin;
 using Microsoft.EntityFrameworkCore;
 
 namespace Company.Manager.DataAccess.Concrete.Contexts
@@ -11,7 +12,9 @@ namespace Company.Manager.DataAccess.Concrete.Contexts
         }
 
         #region Admin
-
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Town> Towns { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<CustomerAddress> CustomerAddresses { get; set; }
         public DbSet<CustomerContact> CustomerContacts { get; set; }

@@ -52,7 +52,7 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("City");
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("Company.Core.Entities.Address.Country", b =>
@@ -83,7 +83,7 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Country");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("Company.Core.Entities.Address.Town", b =>
@@ -119,7 +119,7 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.HasIndex("CityId");
 
-                    b.ToTable("Town");
+                    b.ToTable("Towns");
                 });
 
             modelBuilder.Entity("Company.Manager.Entities.Concrete.Admin.Category", b =>

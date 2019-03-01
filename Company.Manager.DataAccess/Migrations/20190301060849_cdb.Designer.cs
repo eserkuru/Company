@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Company.Manager.DataAccess.Migrations
 {
     [DbContext(typeof(ManagerContext))]
-    [Migration("20190228165108_first")]
-    partial class first
+    [Migration("20190301060849_cdb")]
+    partial class cdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,7 +54,7 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("City");
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("Company.Core.Entities.Address.Country", b =>
@@ -76,7 +76,8 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.Property<string>("ModifiedBy");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<int>("UniqueNumber")
                         .ValueGeneratedOnAdd()
@@ -84,7 +85,7 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Country");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("Company.Core.Entities.Address.Town", b =>
@@ -120,7 +121,7 @@ namespace Company.Manager.DataAccess.Migrations
 
                     b.HasIndex("CityId");
 
-                    b.ToTable("Town");
+                    b.ToTable("Towns");
                 });
 
             modelBuilder.Entity("Company.Manager.Entities.Concrete.Admin.Category", b =>

@@ -74,7 +74,8 @@ namespace Company.Project.DataAccess.Migrations
 
                     b.Property<string>("ModifiedBy");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<int>("UniqueNumber")
                         .ValueGeneratedOnAdd()

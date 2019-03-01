@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Company.Manager.DataAccess.Migrations
 {
-    public partial class first : Migration
+    public partial class cdb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -36,7 +36,7 @@ namespace Company.Manager.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Country",
+                name: "Countries",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
@@ -47,13 +47,13 @@ namespace Company.Manager.DataAccess.Migrations
                     Modified = table.Column<string>(nullable: true),
                     ModifiedBy = table.Column<string>(nullable: true),
                     IsDeleted = table.Column<bool>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
                     Code = table.Column<string>(nullable: true),
                     IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Country", x => x.Id);
+                    table.PrimaryKey("PK_Countries", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -130,7 +130,7 @@ namespace Company.Manager.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "City",
+                name: "Cities",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
@@ -149,11 +149,11 @@ namespace Company.Manager.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_City", x => x.Id);
+                    table.PrimaryKey("PK_Cities", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_City_Country_CountryId",
+                        name: "FK_Cities_Countries_CountryId",
                         column: x => x.CountryId,
-                        principalTable: "Country",
+                        principalTable: "Countries",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -185,9 +185,9 @@ namespace Company.Manager.DataAccess.Migrations
                 {
                     table.PrimaryKey("PK_Customers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Customers_Country_CountryId",
+                        name: "FK_Customers_Countries_CountryId",
                         column: x => x.CountryId,
-                        principalTable: "Country",
+                        principalTable: "Countries",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -222,7 +222,7 @@ namespace Company.Manager.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Town",
+                name: "Towns",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
@@ -241,11 +241,11 @@ namespace Company.Manager.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Town", x => x.Id);
+                    table.PrimaryKey("PK_Towns", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Town_City_CityId",
+                        name: "FK_Towns_Cities_CityId",
                         column: x => x.CityId,
-                        principalTable: "City",
+                        principalTable: "Cities",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -303,15 +303,15 @@ namespace Company.Manager.DataAccess.Migrations
                 {
                     table.PrimaryKey("PK_CustomerAddresses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CustomerAddresses_City_CityId",
+                        name: "FK_CustomerAddresses_Cities_CityId",
                         column: x => x.CityId,
-                        principalTable: "City",
+                        principalTable: "Cities",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_CustomerAddresses_Country_CountryId",
+                        name: "FK_CustomerAddresses_Countries_CountryId",
                         column: x => x.CountryId,
-                        principalTable: "Country",
+                        principalTable: "Countries",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
@@ -321,9 +321,9 @@ namespace Company.Manager.DataAccess.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_CustomerAddresses_Town_TownId",
+                        name: "FK_CustomerAddresses_Towns_TownId",
                         column: x => x.TownId,
-                        principalTable: "Town",
+                        principalTable: "Towns",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -334,8 +334,8 @@ namespace Company.Manager.DataAccess.Migrations
                 column: "ParentCategoryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_City_CountryId",
-                table: "City",
+                name: "IX_Cities_CountryId",
+                table: "Cities",
                 column: "CountryId");
 
             migrationBuilder.CreateIndex(
@@ -379,8 +379,8 @@ namespace Company.Manager.DataAccess.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Town_CityId",
-                table: "Town",
+                name: "IX_Towns_CityId",
+                table: "Towns",
                 column: "CityId");
         }
 
@@ -402,7 +402,7 @@ namespace Company.Manager.DataAccess.Migrations
                 name: "ProductTierPrices");
 
             migrationBuilder.DropTable(
-                name: "Town");
+                name: "Towns");
 
             migrationBuilder.DropTable(
                 name: "Customers");
@@ -411,10 +411,10 @@ namespace Company.Manager.DataAccess.Migrations
                 name: "Products");
 
             migrationBuilder.DropTable(
-                name: "City");
+                name: "Cities");
 
             migrationBuilder.DropTable(
-                name: "Country");
+                name: "Countries");
         }
     }
 }

@@ -47,6 +47,8 @@ namespace Company.Manager.Business.Concrete
 
         public void Update(Country country)
         {
+           var updatedEntity =  _countryDal.Get(c => c.Id == country.Id);
+            //var mapper.<country,updatedEntity>
             _countryDal.Update(country);
         }
 
